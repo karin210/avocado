@@ -1,38 +1,11 @@
 ---
 import MyLayout from '../layouts/MyLayout.astro';
+import Header from '../components/Header.astro';
 ---
 
 <MyLayout>
-	<header>
-		<a id="a-img"><img src="https://avocado.com.au/wp-content/uploads/2020/10/avocado-logo-yoast-seo-1.png" /></a>
-		<a>Menu</a>
-	</header>
+	<Header />
 	<h1>Home</h1>
 </MyLayout>
 
 
-<style type="text/css">
-	header{
-		background-color: transparent;
-		display: flex;
-		align-items: center;
-		justify-content: space-around;
-		height: 5vh;
-		padding: 1% 0;
-
-	}
-
-	header a {
-		font-size: 0.9rem;
-	}
-
-	header a img{
-		align-self: center;
-		width: 100%;
-	}
-
-	#a-img{
-		width: 24%;
-
-	}
-</style>
