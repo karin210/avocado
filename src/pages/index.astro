@@ -3,28 +3,61 @@ import MyLayout from "../layouts/MyLayout.astro"
 import Header from "../components/Header.astro"
 import Logo from "../components/Logo.astro"
 import Sizes from "../components/Sizes.astro"
+import Footer from "../components/Footer.astro"
 ---
 
 <MyLayout>
 	<Header />
-	<main id="homepage-main">
-		<p id="mission">Mision: Enviar los aguacates de mejor calidad garantizando los estándares más altos de BPA (Buenas prácticas Agrícolas) y BPM (Buenas Prácticas de Manufactura)</p>
-		<Logo />
-		<Sizes />
+	<main>
+		<div id="home-main-content">
+			<p id="mission">Mision: Enviar los aguacates de mejor calidad garantizando los estándares más altos de BPA (Buenas prácticas Agrícolas) y BPM (Buenas Prácticas de Manufactura)</p>
+			<Logo />
+			<Sizes />
+			<div id="space"></div>
+		</div>
 	</main>
+	<Footer />
 </MyLayout>
 
 <style type="text/css">
+
 	main {
+		background-image: url("https://www.elcolombiano.com/documents/10157/0/1200x814/0c93/1200d627/none/11101/FTBS/image_content_34296337_20190924114911.jpg");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	#home-main-content {
 		display: flex;
 		flex-flow: column;
 		height: auto;
 		gap: 70px;
 		align-items: center;
+		color: rgba(252, 252, 252, 100%);
+		background-color: rgba(10, 10, 10, 20%);
 	}
+
 
 	#mission{
 		font-size: clamp(0.8rem, 1vw, 1.2rem);
+	}
+
+
+	@media (min-width:425px) {
+
+		main {
+/*			padding-bottom: 20%;*/
+/*			height: 1000px;*/
+		}
+
+		#home-main-content{
+/*			height: 100%;*/
+		}
+
+		#space{
+			height: 30vh;
+		}
 	}
 	
 </style>
