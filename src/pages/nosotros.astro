@@ -1,11 +1,18 @@
 ---
 import MyLayout from "../layouts/MyLayout.astro"
 import Header from "../components/Header.astro"
+import PageH from "../components/PageH.astro"
+import BigSmallTxt from "../components/BigSmallTxt.astro"
 import Footer from "../components/Footer.astro"
 
 ---
 
 <MyLayout>
 	<Header />
-	
+	<PageH 
+	pageName= "Nosotros"/>
+	<BigSmallTxt 
+	bigTxt= "Misión"
+	smallTxt= "Enviar los aguacates de mejor calidad garantizando los estándares más altos de BPA (Buenas prácticas Agrícolas) y BPM (Buenas Prácticas de Manufactura)"/>
+
 </MyLayout>

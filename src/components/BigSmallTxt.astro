@@ -1,0 +1,17 @@
+---
+const { bigTxt, smallTxt } = Astro.props
+---
+
+<p id="bigTxt" class="bigSmallTxt-box">{bigTxt}</p>
+<p id="smallTxt">{smallTxt}</p>
+
+<style type="text/css">
+	.bigSmallTxt-box{
+		display: inline-block;
+	}
+
+	#bigTxt{
+		font-size: clamp(1.5rem, 1vw, 1rem);
+/*		text-align: center;*/
+	}
+</style>

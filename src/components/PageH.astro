@@ -2,9 +2,13 @@
 const { pageName } = Astro.props
 ---
 
-<h1>{pageName}</h1>
+<h1 id="pageH">{pageName}</h1>
 
 
 <style type="text/css">
-	
+	#pageH{
+		font-size: clamp(1rem, 1.1vw, 3rem);
+		text-align: center;
+		background-color: transparent;
+	}	
 </style>
