@@ -8,10 +8,18 @@ const { bigTxt, smallTxt } = Astro.props
 <style type="text/css">
 	.bigSmallTxt-box{
 		display: inline-block;
+		width: 100%;
 	}
 
 	#bigTxt{
 		font-size: clamp(1.5rem, 1vw, 1rem);
-/*		text-align: center;*/
+		font-weight: bold;
+		text-align: center;
+	}
+
+	#smallTxt{
+		font-size: clamp(0.9rem, 1vw, 1rem);
+		padding: 0 clamp(18px, 9%, 12px);
+		text-align: center;
 	}
 </style>

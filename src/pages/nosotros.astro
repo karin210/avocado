@@ -9,10 +9,22 @@ import Footer from "../components/Footer.astro"
 
 <MyLayout>
 	<Header />
-	<PageH 
-	pageName= "Nosotros"/>
-	<BigSmallTxt 
-	bigTxt= "Misión"
-	smallTxt= "Enviar los aguacates de mejor calidad garantizando los estándares más altos de BPA (Buenas prácticas Agrícolas) y BPM (Buenas Prácticas de Manufactura)"/>
+	<section id="nosotros-box">
+		<PageH 
+			pageName= "Nosotros"/>|
+		<article id="mission-vision">
+			<BigSmallTxt 
+			bigTxt= "Misión"
+			smallTxt= "Enviar los aguacates de mejor calidad garantizando los estándares más altos de BPA (Buenas prácticas Agrícolas) y BPM (Buenas Prácticas de Manufactura)"/>
+		</article>
+	</section>
 
 </MyLayout>
+
+
+
+<style type="text/css">
+	#nosotros-box{
+/*		background-color: blue;*/
+	}
+</style>
