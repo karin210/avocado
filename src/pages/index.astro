@@ -8,7 +8,7 @@ import Sizes from "../components/Sizes.astro"
 <MyLayout>
 	<Header />
 	<main id="homepage-main">
-		<p>Mision</p>
+		<p id="mission">Mision: Enviar los aguacates de mejor calidad garantizando los estándares más altos de BPA (Buenas prácticas Agrícolas) y BPM (Buenas Prácticas de Manufactura)</p>
 		<Logo />
 		<Sizes />
 	</main>
@@ -20,6 +20,11 @@ import Sizes from "../components/Sizes.astro"
 		flex-flow: column;
 		height: auto;
 		gap: 70px;
+		align-items: center;
+	}
+
+	#mission{
+		font-size: clamp(0.8rem, 1vw, 1.2rem);
 	}
 	
 </style>
