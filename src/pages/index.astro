@@ -1,12 +1,23 @@
 ---
 import MyLayout from "../layouts/MyLayout.astro"
 import Header from "../components/Header.astro"
-import MainTop from "../components/MainTop.astro"
+import Logo from "../components/Logo.astro"
 ---
 
 <MyLayout>
 	<Header />
-	<MainTop />
+	<main id="homepage-main">
+		<Logo />
+		<div></div>
+	</main>
 </MyLayout>
 
-
+<style type="text/css">
+	main {
+		display: flex;
+		flex-flow: column wrap;
+		height: 100vh;
+		align-self: center;
+	}
+	
+</style>
