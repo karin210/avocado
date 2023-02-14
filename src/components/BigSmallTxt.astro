@@ -1,25 +1,55 @@
 ---
-const { bigTxt, smallTxt } = Astro.props
 ---
-
-<p id="bigTxt" class="bigSmallTxt-box">{bigTxt}</p>
-<p id="smallTxt">{smallTxt}</p>
+<section id="brandInfo-box">
+	<article>
+		<p id="bigTxt" class="bigSmallTxt-box">Misión</p>
+		<p id="smallTxt">Enviar los aguacates de mejor calidad garantizando los estándares más altos de BPA (Buenas prácticas Agrícolas) y BPM (Buenas Prácticas de Manufactura)</p>
+		<i class="fa-solid fa-circle-chevron-down"></i>
+	</article>
+	<article>
+		<p id="bigTxt" class="bigSmallTxt-box">Visión</p>
+		<p id="smallTxt">Ser el principal proveedor de aguacate del mundo</p>
+		<i class="fa-solid fa-circle-chevron-down"></i>
+	</article>
+	<article>
+		<p id="bigTxt" class="bigSmallTxt-box">Historia</p>
+		<p id="smallTxt">Además, a partir de mayo de 2015, Corporativo La Viña estableció un centro de dAdemás, a partir de mayo de 2015, Corporativo La Viña estableció un centro de distribución en San Salvador Huixcolotla, Puebla, beneficiando la logística de sus clientes del centro y sureste de México, con instalaciones de primer nivel ofertando diferentes productos. demás, a partir de mayo de 2015, Corporativo La Viña estableció un centro de distribución en San Salvador Huixcolotla, Puebla, beneficiando la logística de sus clientes del centro y sureste de México, con instalaciones de primer nivel ofertando diferentes productos.</p>
+		<i class="fa-solid fa-circle-chevron-down"></i>
+	</article>
+	
+</section>
 
 <style type="text/css">
-	.bigSmallTxt-box{
-		display: inline-block;
-		width: 100%;
+	#brandInfo-box{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 50px 0;
 	}
 
+	#brandInfo-box article{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		border-bottom: 1px solid #D8D8D8;
+	}
+
+
 	#bigTxt{
-		font-size: 1rem;
+		font-size: 1.7rem;
 		font-weight: bold;
 		text-align: center;
 	}
 
 	#smallTxt{
+		display: none;
 		font-size: clamp(0.9rem, 1vw, 1rem);
 		padding: 0 clamp(18px, 9%, 12px);
 		text-align: center;
+	}
+
+	article i {
+		color: rgba(60,155,60,100%);
 	}
 </style>
