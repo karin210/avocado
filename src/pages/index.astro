@@ -10,7 +10,11 @@ import Footer from "../components/Footer.astro"
 	<Header />
 	<main>
 		<div id="home-main-content">
-			<div id="space"></div>
+			<div class="headTxt-box">
+				<p class="headTxt">Aguacate Hass de México</p>
+			</div>
+
+			<!-- <div id="space"></div> -->
 		</div>
 	</main>
 	<!-- <Footer /> -->
@@ -31,14 +35,31 @@ import Footer from "../components/Footer.astro"
 		height: auto;
 		gap: 70px;
 		align-items: center;
-		color: rgba(252, 252, 252, 100%);
-		background-color: rgba(10, 10, 10, 20%);
-		padding-top: 100px;
+/*		color: rgba(252, 252, 252, 100%);*/
+/*		background-color: rgba(10, 10, 10, 20%);*/
 	}
 
 
 	#mission{
 		font-size: clamp(0.8rem, 1vw, 1.2rem);
+	}
+
+	.headTxt-box{
+		background-image: url(https://images.unsplash.com/photo-1655558131821-e4e342357d8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+		background-position: center;
+		background-size: center;
+		height: 30vh;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+	}
+
+	.headTxt{
+		font-size: 2rem;
+		color: white;
+		margin: 0;
 	}
 
 
