@@ -1,37 +1,33 @@
 <header>
-		<a>Menu</a>
+		<div></div>
+		<div></div>
+		<div></div>
 </header>
 
 <style type="text/css">
 	header{
-		background-color: transparent;
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: rgba(88,34,8,100%);
 		display: flex;
+		flex-direction: column;
 		align-items: center;
-		justify-content: space-around;
-		height: 5vh;
-		max-height: 25px;
+		justify-content: center;
+		gap: 9px;
+		height: 64px;
+		width: 78px;
+/*		max-height: 25px;*/
 		padding: 1% 0;
+		z-index: 1;
+		border-radius: 8% 0 10% 59%;
 
 	}
 
-	header a {
-		font-size: clamp(0.8rem, 1vw, 1.1rem);
-	}
 
-	header a img{
-		align-self: center;
-		width: 100%;
-	}
-
-	#a-img{
-		width: 24%;
-		max-width: 80px;
-	}
-
-	@media (min-width: 900px) {
-		#a-img{
-			max-width: 130px;
-		}
-
+	header div {
+		width: 20px;
+		height: 2px;
+		background-color: ghostwhite;
 	}
 </style>
