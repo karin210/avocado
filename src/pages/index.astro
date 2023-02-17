@@ -13,8 +13,8 @@ import Hello from "../components/Hello.astro"
 	<main>
 		<div id="home-main-content">
 			<div class="headTxt-box">
-				<p class="headTxt">Aguacate Hass de México</p>
 			</div>
+			<p class="headTxt">Aguacate Hass de México</p>
 
 			<!-- <div id="space"></div> -->
 		</div>
@@ -57,14 +57,17 @@ import Hello from "../components/Hello.astro"
 
 	.headTxt{
 		position: absolute;
-		top: 0;
-		left: 0;
-		font-size: clamp(3rem, 3.5vw, 3.5rem);
+	  top: 0;
+	  bottom: 0;
+	  left: 0;
+	  margin: auto 0;
+	  font-size: clamp(3rem, 3.5vw, 3.5rem);
 		font-weight: bold;
-		color: rgba(250, 250, 250, 85%);
+		color: rgba(250, 250, 250, 100%);
 		margin-left: 3%;
 		width: 50%;
 		max-width: 290px;
+		height: 30%;
 	}
 
 
