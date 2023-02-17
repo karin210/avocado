@@ -9,15 +9,10 @@ import Hello from "../components/Hello.astro"
 ---
 
 <MyLayout>
-	<Header />
-	<main>
-		<div id="home-main-content">
-			<div class="headTxt-box">
-			</div>
-			<p class="headTxt">Aguacate Hass de México</p>
-
-			<!-- <div id="space"></div> -->
-		</div>
+	<main id="home-main-content">
+		<Header />
+		<img class="headTxt-box"/>
+		<p class="headTxt">Aguacate Hass de México</p>
 	</main>
 	<Hello />
 	<script type="text/javascript">
@@ -33,18 +28,18 @@ import Hello from "../components/Hello.astro"
 	}
 
 	#home-main-content {
-		display: flex;
+	/*	display: flex;
 		flex-flow: column;
 		height: auto;
 		gap: 70px;
-		align-items: center;
+		align-items: center;*/
 	}
 
 	.headTxt-box{
 		filter: brightness(0.93);
-		height: 92vh;
+		height: 95vh;
 		width: 100%;
-/*		display: flex;*/
+		display: flex;
 		align-items: center;
 		background-image: url(https://www.mixt.com/wp-content/uploads/2020/07/Stocksy_txp33c5c38aAom100_Medium_1735653.jpg);
 		background-size: cover;
@@ -77,15 +72,9 @@ import Hello from "../components/Hello.astro"
 	}
 
 
-/*landscape mode*/
-	@media (600px <= width <= 950px) {
+/*laptop up*/
+	@media (min-width: 1024px) and (orientation: landscape) {
 
-		.headTxt{
-			width: 100%;
-			max-width: 100%;
-			margin: 0;
-			text-align: center;
-		}
 		
 	}
 	
