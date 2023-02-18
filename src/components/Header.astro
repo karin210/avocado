@@ -112,12 +112,38 @@ animation-name: startHeader;
 		to {filter: brightness(0.93);}
 			}
 
+/*laptop up*/
+	@media (min-width: 1024px) and (orientation: landscape) {
 
+
+			#menu-icon{
+				display: none;
+			}
+
+			.nav-touch-box{
+				border-radius: 0;
+				width: 100%;
+				height: 6vh;
+				padding: 0;
+
+			}
+
+			.nav-touch-menu{
+				display: flex;
+				flex-flow: row wrap;
+				position: unset;
+				margin-top: 0;
+			}
+
+			.nav-touch-menu a{
+/*				display: inline;*/
+				padding: 0;
+				width: auto;
+			}
+		
+	}
 </style>
 
-
-<!-- Bugs
-				the thing render first that the animation -->
 
 <script type="text/javascript">
 	const navBox = document.querySelector(".nav-touch-box");
