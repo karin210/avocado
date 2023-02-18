@@ -1,8 +1,12 @@
 <script type="text/javascript">
-	const background = document.querySelector(".headTxt-box");
-	const text = document.querySelector(".headTxt");
+	const navBox = document.querySelector(".nav-touch-box");
+	const menuIcon = document.querySelector("#menu-icon"); 
+	const navMenu = document.querySelector(".nav-touch-menu");
 
-	
-
+	menuIcon.addEventListener("touchstart", dropDown);
+	function dropDown() {
+		navBox.classList.add("nav-touch-open");
+		navMenu.style.display = "flex";
+	}
 	
 </script>
