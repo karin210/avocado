@@ -4,9 +4,26 @@
 	const navMenu = document.querySelector(".nav-touch-menu");
 
 	menuIcon.addEventListener("touchstart", dropDown);
+
+	let menuOpen = false;
+
 	function dropDown() {
 		navBox.classList.add("nav-touch-open");
 		navMenu.style.display = "flex";
+		menuIcon.style.marginLeft = '78%'
+		menuOpen = true;
+		// isMenuOpen();
 	}
+
+	// function isMenuOpen() {
+	// 	if(menuOpen) {
+			
+	// 	}
+
+	// }
+
+
+
+
 	
 </script>
