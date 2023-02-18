@@ -1,5 +1,8 @@
+
 <header>
 		<nav class="nav-touch-box">
+			
+			<span id="menuWord">Menú</span>
 			<!-- menu icon -->
 			<ul id="menu-icon">
 				<li></li>
@@ -137,11 +140,56 @@
 		background-image: url("https://images.unsplash.com/photo-1596524430615-b46475ddff6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
 	}
 
+	#menuWord{
+		display: none;
+		position: absolute;
+		top: 20px;
+		left: 0;
+		right: 0;
+		font-size: 1.1rem;
+		color: ghostwhite;
+		text-align: center;
+	}
+
 	/*#nav-cursor{
 		background-color: rgba(88,34,8,100%);
 		height: 64px;
 	}*/
 </style>
 
+
 <!-- Bugs
 				the thing render first that the animation -->
+
+<script type="text/javascript">
+	const navBox = document.querySelector(".nav-touch-box");
+	const menuIcon = document.querySelector("#menu-icon"); 
+	const navMenu = document.querySelector(".nav-touch-menu");
+	const menuWord = document.querySelector("#menuWord");
+
+	// Menu phone View 
+
+	menuIcon.addEventListener("touchstart", dropDown);
+
+	let menuOpen = false;
+
+	function dropDown() {
+		navBox.classList.add("nav-touch-open");
+		navMenu.style.display = "flex";
+		menuIcon.style.marginLeft = '78%';
+		menuWord.style.display = "block";
+
+		menuOpen = true;
+		// isMenuOpen();
+	}
+
+	// function isMenuOpen() {
+	// 	if(menuOpen) {
+			
+	// 	}
+
+	// }
+
+
+
+</script>
