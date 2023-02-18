@@ -1,8 +1,6 @@
 
 <header>
 		<nav class="nav-touch-box">
-
-			<span id="menuWord">Menú</span>
 			<!-- menu icon -->
 			<ul id="menu-icon">
 				<li></li>
@@ -11,23 +9,18 @@
 			</ul>
 			<section class="nav-touch-menu">
 				<a id="a-nosotros">
-					<img class="a-img" />
 					<span>Nosotros</span>
 				</a>
 				<a id="a-producto">
-					<img class="a-img" />
 					<span>Producto</span>
 				</a>
 				<a id="a-artículos">
-					<img class="a-img" />
 					<span>Artículos</span>
 				</a>
 				<a id="a-clientes">
-					<img class="a-img" />
 					<span>Clientes</span>
 				</a>
 				<a id="a-contacto">
-					<img class="a-img" />
 					<span>Contacto</span>
 				</a>
 			</section>
@@ -108,53 +101,6 @@
 		color: ghostwhite;
 	}
 
-	.a-img{
-		position: absolute;
-		left: 0;
-		width: 100%;
-		height: 106px;
-		z-index: -1;
-		background-position: center;
-		background-size: cover;
-		filter: brightness(0.4);
-	}
-
-	#a-nosotros img{
-		top: 85px;
-		background-image: url("https://images.unsplash.com/photo-1624555130581-1d9cca783bc0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80");
-	}
-
-	#a-producto img{
-		top: 190px;
-		background-image: url("https://images.unsplash.com/photo-1579254646874-46ce7049df38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
-	}
-
-	#a-artículos img{
-		top: 296px;
-		background-image: url("https://images.unsplash.com/photo-1546074177-ffdda98d214f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
-	}
-
-	#a-clientes img{
-		top: 400px;
-		background-image: url("https://images.unsplash.com/photo-1606185540834-d6e7483ee1a4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
-	}
-
-	#a-contacto img{
-		top: 505px;
-		background-image: url("https://images.unsplash.com/photo-1596524430615-b46475ddff6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
-	}
-
-	#menuWord{
-		display: none;
-		position: absolute;
-		top: 20px;
-		left: 0;
-		right: 0;
-		font-size: 1.1rem;
-		color: ghostwhite;
-		text-align: center;
-	}
-
 	/*#nav-cursor{
 		background-color: rgba(88,34,8,100%);
 		height: 64px;
@@ -169,7 +115,6 @@
 	const navBox = document.querySelector(".nav-touch-box");
 	const menuIcon = document.querySelector("#menu-icon"); 
 	const navMenu = document.querySelector(".nav-touch-menu");
-	const menuWord = document.querySelector("#menuWord");
 
 	// Menu phone View 
 	let menuOpen = false;
@@ -185,11 +130,9 @@
 		navBox.classList.add("nav-touch-open");
 		navMenu.style.display = "flex";
 		menuIcon.style.marginLeft = '83%';
-		menuWord.style.display = "block";
 		// menuOpen = !menuOpen;
 		} else {
 				console.log("closed!");
-				menuWord.style.display = "none";
 				navMenu.style.display = "none";
 				navBox.classList.remove("nav-touch-open");
 				menuIcon.style.marginLeft = '0';
