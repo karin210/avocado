@@ -1,7 +1,7 @@
 
 <header>
 		<nav class="nav-touch-box">
-			
+
 			<span id="menuWord">Menú</span>
 			<!-- menu icon -->
 			<ul id="menu-icon">
@@ -60,11 +60,15 @@
 	}
 
 	#menu-icon{
+		position: absolute;
+/*		top: ;*/
     display: flex;
     flex-direction: column;
     gap: 7px;
     list-style: none;
     padding: 0;
+/*    z-index: 2;*/
+
 		}
 
 
@@ -168,27 +172,32 @@
 	const menuWord = document.querySelector("#menuWord");
 
 	// Menu phone View 
+	let menuOpen = false;
 
 	menuIcon.addEventListener("touchstart", dropDown);
 
-	let menuOpen = false;
 
 	function dropDown() {
+	console.log(menuOpen);
+  	menuOpen = !menuOpen;
+		if(menuOpen) {
+			console.log("open!");
 		navBox.classList.add("nav-touch-open");
 		navMenu.style.display = "flex";
 		menuIcon.style.marginLeft = '78%';
 		menuWord.style.display = "block";
+		// menuOpen = !menuOpen;
+		} else {
+			console.log("closed!");
+			menuWord.style.display = "none";
+			navMenu.style.display = "none";
+			navBox.classList.remove("nav-touch-open");
 
-		menuOpen = true;
-		// isMenuOpen();
+		}
 	}
 
-	// function isMenuOpen() {
-	// 	if(menuOpen) {
-			
-	// 	}
 
-	// }
+
 
 
 
