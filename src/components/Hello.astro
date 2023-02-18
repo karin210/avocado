@@ -3,6 +3,8 @@
 	const menuIcon = document.querySelector("#menu-icon"); 
 	const navMenu = document.querySelector(".nav-touch-menu");
 
+	// Menu phone View 
+
 	menuIcon.addEventListener("touchstart", dropDown);
 
 	let menuOpen = false;
@@ -10,7 +12,12 @@
 	function dropDown() {
 		navBox.classList.add("nav-touch-open");
 		navMenu.style.display = "flex";
-		menuIcon.style.marginLeft = '78%'
+		menuIcon.style.marginLeft = '78%';
+		const menuWord = document.createElement("span");
+		menuWord.innerText = "Menu";
+		menuWord.classList.add("menuWord");
+		navBox.appendChild(menuWord);
+
 		menuOpen = true;
 		// isMenuOpen();
 	}
