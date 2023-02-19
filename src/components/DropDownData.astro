@@ -108,7 +108,23 @@
 						descriptions[2].classList.add("weStoryTxtShow");
 						arrowBtns[2].classList.add("arrowUp");
 						}
+				openTxt = !openTxt;
 			}
+			 // close text 
+			else{
+				if(e.target === arrowBtns[0]){				
+					descriptions[0].classList.remove("weTxtShow");
+					arrowBtns[0].classList.remove("arrowUp");
+				} else if(e.target === arrowBtns[1]){
+						descriptions[1].classList.remove("weTxtShow");
+						arrowBtns[1].classList.remove("arrowUp");
+					} else if(e.target === arrowBtns[2]) {
+						descriptions[2].classList.remove("weStoryTxtShow");
+						arrowBtns[2].classList.remove("arrowUp");
+						}
+				openTxt = !openTxt;
+			}
+			
 				
 			
 		})
