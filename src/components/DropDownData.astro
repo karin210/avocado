@@ -26,7 +26,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		gap: 50px 0;
+		gap: 0.5px 0;
 	}
 
 	.topic{
@@ -70,24 +70,30 @@
 
 	.weTxtHidden{
 		display: block;
+		background-color: rgba(143,241,101,90%);
 		font-size: clamp(0.9rem, 1vw, 1rem);
-		padding: 0 clamp(18px, 9%, 12px);
+		margin: 0 5%;
 		text-align: center;
 		height: 0;
 		overflow: hidden;
 		transition: 1s;
 	}
 
-	.weTxtShow{
-		height: 50px;
-		background-color: rgba(143,241,101,90%);
-		margin: 0 5%;
-		padding: 4% 3%;
+	.weTxtShow-mission, .weTxtShow-vision{
+		padding: 8% 3%;
+
+	}
+	.weTxtShow-mission{
+		height: 78px;
 	}
 
-	.weStoryTxtShow{
-		height: 190px;
+	.weTxtShow-vision{
+		height: 40px;		
+	}
 
+	.weTxtShow-story{
+		height: 210px;
+		padding: 10% 3%;
 	}
 
 	article i {
@@ -116,13 +122,14 @@
 		arrowBtns[i].addEventListener("touchstart", function (e) {
 			// open text
 			if(!openTxt){
-				if(e.target === arrowBtns[0]){			descriptions[0].classList.add("weTxtShow");
+				if(e.target === arrowBtns[0]){
+					descriptions[0].classList.add("weTxtShow-mission");
 					arrowBtns[0].classList.add("arrowUp");
 				} else if(e.target === arrowBtns[1]){
-						descriptions[1].classList.add("weTxtShow");
+						descriptions[1].classList.add("weTxtShow-vision");
 						arrowBtns[1].classList.add("arrowUp");
 					} else if(e.target === arrowBtns[2]) {
-						descriptions[2].classList.add("weStoryTxtShow");
+						descriptions[2].classList.add("weTxtShow-story");
 						arrowBtns[2].classList.add("arrowUp");
 						}
 				openTxt = !openTxt;
@@ -130,13 +137,13 @@
 			 // close text 
 			else{
 				if(e.target === arrowBtns[0]){				
-					descriptions[0].classList.remove("weTxtShow");
+					descriptions[0].classList.remove("weTxtShow-mission");
 					arrowBtns[0].classList.remove("arrowUp");
 				} else if(e.target === arrowBtns[1]){
-						descriptions[1].classList.remove("weTxtShow");
+						descriptions[1].classList.remove("weTxtShow-vision");
 						arrowBtns[1].classList.remove("arrowUp");
 					} else if(e.target === arrowBtns[2]) {
-						descriptions[2].classList.remove("weStoryTxtShow");
+						descriptions[2].classList.remove("weTxtShow-story");
 						arrowBtns[2].classList.remove("arrowUp");
 						}
 				openTxt = !openTxt;
