@@ -9,7 +9,9 @@ import Logo from "./Logo.astro"
 				<li></li>
 				<li></li>				
 			</ul>
-			<Logo />
+			<Logo 
+			classFig = "logo-box"
+			classImg = "logo-img"/>
 			<section class="nav-touch-menu">
 				<a href="/nosotros/" id="a-nosotros">
 					<span>Nosotros</span>
@@ -115,6 +117,7 @@ animation-name: startHeader;
 		to {filter: brightness(0.93);}
 			}
 
+
 /*laptop up*/
 	@media (min-width: 1024px) and (orientation: landscape) {
 
@@ -128,6 +131,8 @@ animation-name: startHeader;
 				width: 100%;
 				height: 6vh;
 				padding: 0;
+				display: flex;
+				flex-flow: row wrap;
 
 			}
 
@@ -140,6 +145,7 @@ animation-name: startHeader;
 				margin-right: 5%;
 				gap: 5%;
 				height: 100%;
+				width: auto;
 			}
 
 			.nav-touch-menu a{
@@ -148,6 +154,8 @@ animation-name: startHeader;
 				width: auto;
 
 			}
+
+
 		
 	}
 </style>
