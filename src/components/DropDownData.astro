@@ -1,34 +1,26 @@
 ---
 ---
-<section id="brandInfo-box">
-	<article>
+<article id="brandInfo-box">
+	<section>
 		<p class="bigTxt">Misión</p>
 		<p id="missionP" class="weTxtHidden">Enviar los aguacates de mejor calidad garantizando los estándares más altos de BPA (Buenas prácticas Agrícolas) y BPM (Buenas Prácticas de Manufactura)</p>
 		<i class="fa-solid fa-circle-chevron-down"></i>
-	</article>
-	<article>
+	</section>
+	<section>
 		<p class="bigTxt">Visión</p>
 		<p id="visionP" class="weTxtHidden">Ser el principal proveedor de aguacate del mundo</p>
 		<i class="fa-solid fa-circle-chevron-down"></i>
-	</article>
-	<article>
+	</section>
+	<section>
 		<p class="bigTxt">Historia</p>
-		<p id="visionP" class="weTxtHidden">Además, a partir de mayo de 2015, Corporativo La Viña estableció un centro de dAdemás, a partir de mayo de 2015, Corporativo La Viña estableció un centro de distribución en San Salvador Huixcolotla, Puebla, beneficiando la logística de sus clientes del centro y sureste de México, con instalaciones de primer nivel ofertando diferentes productos. demás, a partir de mayo de 2015, Corporativo La Viña estableció un centro de distribución en San Salvador Huixcolotla, Puebla, beneficiando la logística de sus clientes del centro y sureste de México, con instalaciones de primer nivel ofertando diferentes productos.</p>
+		<p id="storyP" class="weTxtHidden">Además, a partir de mayo de 2015, Corporativo La Viña estableció un centro de dAdemás, a partir de mayo de 2015, Corporativo La Viña estableció un centro de distribución en San Salvador Huixcolotla, Puebla, beneficiando la logística de sus clientes del centro y sureste de México, con instalaciones de primer nivel ofertando diferentes productos. demás, a partir de mayo de 2015, Corporativo La Viña estableció un centro de distribución en San Salvador Huixcolotla, Puebla, beneficiando la logística de sus clientes del centro y sureste de México, con instalaciones de primer nivel ofertando diferentes productos.</p>
 		<i class="fa-solid fa-circle-chevron-down"></i>
-	</article>
+	</section>
 	
 	
-</section>
+</article>
 
 <style type="text/css">
-
-	.storyP{
-		height: 0;
-		margin: 0;
-		display: block;
-		transition: 1s height;
-		font-size: 0;
-	}
 
 	#brandInfo-box{
 		display: flex;
@@ -37,7 +29,7 @@
 		gap: 50px 0;
 	}
 
-	#brandInfo-box article{
+	#brandInfo-box section{
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -58,8 +50,8 @@
 		padding: 0 clamp(18px, 9%, 12px);
 		text-align: center;
 		height: 0;
-		color: #FCFCFC;
-		transition: 2s;
+		overflow: hidden;
+		transition: 1s;
 	}
 
 	.weTxtShow{
@@ -69,7 +61,7 @@
 
 	.weStoryTxtShow{
 		height: 190px;
-		color: #0D0D0D;
+
 	}
 
 	article i {
@@ -98,8 +90,7 @@
 		arrowBtns[i].addEventListener("touchstart", function (e) {
 			// open text
 			if(!openTxt){
-				if(e.target === arrowBtns[0]){				
-					descriptions[0].classList.add("weTxtShow");
+				if(e.target === arrowBtns[0]){			descriptions[0].classList.add("weTxtShow");
 					arrowBtns[0].classList.add("arrowUp");
 				} else if(e.target === arrowBtns[1]){
 						descriptions[1].classList.add("weTxtShow");
