@@ -31,9 +31,6 @@ import Logo from "./Logo.astro"
 			</section>
 
 		</nav>
-		<!-- <nav id="nav-cursor">
-			<a></a>
-		</nav> -->
 </header>
 
 <style type="text/css">
@@ -50,7 +47,6 @@ import Logo from "./Logo.astro"
 		gap: 9px;
 		height: 55px;
 		width: 60px;
-/*		max-height: 25px;*/
 		padding: 1% 0;
 		z-index: 1;
 		border-radius: 8% 0 10% 59%;
@@ -59,14 +55,12 @@ import Logo from "./Logo.astro"
 
 	#menu-icon{
 		position: absolute;
-/*		top: ;*/
     display: flex;
     flex-direction: column;
     gap: 7px;
     list-style: none;
     padding: 0;
-/*    z-index: 2;*/
-animation-name: startHeader;
+		animation-name: startHeader;
 		animation-duration: 2s;
 
 		}
@@ -74,7 +68,7 @@ animation-name: startHeader;
 	.nav-touch-box ul li {
 		width: 20px;
 		height: 2px;
-		background-color: ghostwhite;
+		background-color: #FCFCFC;
 	}
 
 	.nav-touch-open{
@@ -102,7 +96,7 @@ animation-name: startHeader;
 	}
 
 	.nav-touch-menu a span{
-		font-size: 1.2rem;
+		font-size: 1rem;
 		font-weight: bold;
 		color: ghostwhite;
 	}
@@ -142,11 +136,9 @@ animation-name: startHeader;
 				flex-flow: row wrap;
 				position: unset;
 				margin-top: 0;
-				justify-content: end;
-				margin-right: 5%;
 				gap: 5%;
 				height: 100%;
-				width: auto;
+				width: 30%;
 			}
 
 			.nav-touch-menu a{
