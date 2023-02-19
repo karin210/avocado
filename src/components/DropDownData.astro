@@ -1,0 +1,119 @@
+---
+---
+<section id="brandInfo-box">
+	<article>
+		<p class="bigTxt">Misión</p>
+		<p id="missionP" class="weTxtHidden">Enviar los aguacates de mejor calidad garantizando los estándares más altos de BPA (Buenas prácticas Agrícolas) y BPM (Buenas Prácticas de Manufactura)</p>
+		<i class="fa-solid fa-circle-chevron-down"></i>
+	</article>
+	<article>
+		<p class="bigTxt">Visión</p>
+		<p id="visionP" class="weTxtHidden">Ser el principal proveedor de aguacate del mundo</p>
+		<i class="fa-solid fa-circle-chevron-down"></i>
+	</article>
+	<article>
+		<p class="bigTxt">Historia</p>
+		<p id="visionP" class="weTxtHidden">Además, a partir de mayo de 2015, Corporativo La Viña estableció un centro de dAdemás, a partir de mayo de 2015, Corporativo La Viña estableció un centro de distribución en San Salvador Huixcolotla, Puebla, beneficiando la logística de sus clientes del centro y sureste de México, con instalaciones de primer nivel ofertando diferentes productos. demás, a partir de mayo de 2015, Corporativo La Viña estableció un centro de distribución en San Salvador Huixcolotla, Puebla, beneficiando la logística de sus clientes del centro y sureste de México, con instalaciones de primer nivel ofertando diferentes productos.</p>
+		<i class="fa-solid fa-circle-chevron-down"></i>
+	</article>
+	
+	
+</section>
+
+<style type="text/css">
+
+	.storyP{
+		height: 0;
+		margin: 0;
+		display: block;
+		transition: 1s height;
+		font-size: 0;
+	}
+
+	#brandInfo-box{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 50px 0;
+	}
+
+	#brandInfo-box article{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding-bottom: 5px;
+		border-bottom: 1px solid #D8D8D8;
+	}
+
+	.bigTxt{
+		font-size: 1.7rem;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.weTxtHidden{
+		display: block;
+		font-size: clamp(0.9rem, 1vw, 1rem);
+		padding: 0 clamp(18px, 9%, 12px);
+		text-align: center;
+		height: 0;
+		color: #FCFCFC;
+		transition: 2s;
+	}
+
+	.weTxtShow{
+		height: 50px;
+		color: #0D0D0D;
+	}
+
+	.weStoryTxtShow{
+		height: 140px;
+		color: #0D0D0D;
+	}
+
+	article i {
+		font-size: 2rem;
+		color: #60CF30;
+		transition: 1s;
+	}
+
+	.arrowUp{
+		transform: rotate(0.5turn);
+		color: unset;
+
+	}
+
+
+</style>
+
+<script type="text/javascript">
+	const arrowBtns = document.querySelectorAll(".fa-circle-chevron-down");
+	const descriptions = document.querySelectorAll(".weTxtHidden");
+	const last = document.querySelector(".storyP");
+	console.log(descriptions);
+
+	let openTxt = false;
+	for(i = 0; i < arrowBtns.length; i++){
+		arrowBtns[i].addEventListener("touchstart", function (e) {
+			// open text
+			if(!openTxt){
+				if(e.target === arrowBtns[0]){				
+					descriptions[0].classList.add("weTxtShow");
+					arrowBtns[0].classList.add("arrowUp");
+				} else if(e.target === arrowBtns[1]){
+						descriptions[1].classList.add("weTxtShow");
+						arrowBtns[1].classList.add("arrowUp");
+					} else if(e.target === arrowBtns[2]) {
+						descriptions[2].classList.add("weStoryTxtShow");
+						arrowBtns[2].classList.add("arrowUp");							
+						}
+			}
+				
+			
+		})
+	}
+	
+
+
+</script>
