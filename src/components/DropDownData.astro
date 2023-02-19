@@ -1,17 +1,17 @@
 ---
 ---
 <article id="brandInfo-box">
-	<section>
+	<section class="topic">
 		<p class="bigTxt">Misión</p>
 		<p id="missionP" class="weTxtHidden">Enviar los aguacates de mejor calidad garantizando los estándares más altos de BPA (Buenas prácticas Agrícolas) y BPM (Buenas Prácticas de Manufactura)</p>
 		<i class="fa-solid fa-circle-chevron-down"></i>
 	</section>
-	<section>
+	<section class="topic">
 		<p class="bigTxt">Visión</p>
 		<p id="visionP" class="weTxtHidden">Ser el principal proveedor de aguacate del mundo</p>
 		<i class="fa-solid fa-circle-chevron-down"></i>
 	</section>
-	<section>
+	<section class="topic">
 		<p class="bigTxt">Historia</p>
 		<p id="storyP" class="weTxtHidden">Además, a partir de mayo de 2015, Corporativo La Viña estableció un centro de dAdemás, a partir de mayo de 2015, Corporativo La Viña estableció un centro de distribución en San Salvador Huixcolotla, Puebla, beneficiando la logística de sus clientes del centro y sureste de México, con instalaciones de primer nivel ofertando diferentes productos. demás, a partir de mayo de 2015, Corporativo La Viña estableció un centro de distribución en San Salvador Huixcolotla, Puebla, beneficiando la logística de sus clientes del centro y sureste de México, con instalaciones de primer nivel ofertando diferentes productos.</p>
 		<i class="fa-solid fa-circle-chevron-down"></i>
@@ -29,13 +29,37 @@
 		gap: 50px 0;
 	}
 
-	#brandInfo-box section{
+	.topic{
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		padding-bottom: 5px;
 		border-bottom: 1px solid #D8D8D8;
+		filter: brightness(0.9);
+	}
+
+	.topic:nth-of-type(1){
+		background-image: url("https://images.unsplash.com/photo-1580823673523-a1a474e4967c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+		background-size: cover;
+		background-position: center;
+
+	}
+
+	.topic:nth-of-type(2){
+		background-image: url("https://images.unsplash.com/photo-1588137378633-dea1336ce1e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+		background-size: cover;
+		background-position: center;
+
+	}
+
+
+	.topic:nth-of-type(3){
+		background-image: url("https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+		background-size: cover;
+		background-position: center;
+		
+
 	}
 
 	.bigTxt{
@@ -56,7 +80,9 @@
 
 	.weTxtShow{
 		height: 50px;
-		color: #0D0D0D;
+		background-color: rgba(143,241,101,90%);
+		margin: 0 5%;
+		padding: 4% 3%;
 	}
 
 	.weStoryTxtShow{
@@ -66,7 +92,7 @@
 
 	article i {
 		font-size: 2rem;
-		color: #60CF30;
+		color: #8FF165;
 		transition: 1s;
 	}
 
