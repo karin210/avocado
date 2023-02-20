@@ -1,65 +1,97 @@
-<div id="wePics">
-	<h1 id="picsH1">Fotos</h1>
-	<picture>
-		<figure class="weFig">
-			<img class="weImg" alt="Almacén" src="https://burst.shopifycdn.com/photos/sun-shines-into-warehouse.jpg?width=925&format=pjpg&exif=1&iptc=1">
-			<figcaption class="weFigCap">Almacén</figcaption>
-		</figure>
-		<!-- <figure class="weFig">
-			<img class="weImg" alt="Instalaciónes" src="https://burst.shopifycdn.com/photos/windowless-white-building.jpg?width=925&format=pjpg&exif=1&iptc=1">
-			<figcaption class="weFigCap">Instalaciónes</figcaption>
-		</figure>
-		<figure class="weFig">
-			<img class="weImg" alt="Carga de producto" src="https://burst.shopifycdn.com/photos/truck-at-loading-bay.jpg?width=925&format=pjpg&exif=1&iptc=1">
-			<figcaption class="weFigCap">Carga de producto</figcaption>
-		</figure>
-		<figure class="weFig">
-			<img class="weImg" alt="Producto" src="https://images.unsplash.com/photo-1596119415004-be78a87f8d14?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=762&q=80">
-			<figcaption class="weFigCap">Producto</figcaption>
-		</figure>
-		<figure class="weFig">
-			<img class="weImg" alt="Equipo" src="https://images.unsplash.com/photo-1572021335469-31706a17aaef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80">
-			<figcaption class="weFigCap">Equipo</figcaption>
-		</figure> -->
-	</picture>
+
+	<!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div id="team-img" class="swiper-slide"></div>
+    <div id="product-img" class="swiper-slide"></div>
+    <div id="warehouse-img" class="swiper-slide"></div>
+    <div id="companyFront-img" class="swiper-slide"></div>
+    <div id="charging-img" class="swiper-slide"></div>
+    			
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
 </div>
 
 <style type="text/css">
 
-		#wePics{
+	.swiper{
+		height: 400px;
+/*		background-color: black;*/
+	}
 
-			background-color: #FCFCFC;
-			padding: 10% 0;
-		}
+	.swiper-wrapper img{
+/*		width: 200%;*/
+	}
 
-		#picsH1{
-			font-size: 1.7rem;
-			text-align: center;
-			color: #0D0D0D;
-		}
+	#team-img{
+		background-image: url("https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+		background-size: cover;
+		background-position: center;
+	}
 
-		#wePics picture{
-			display: flex;
-			flex-flow: row wrap;
-			gap: 50px;
+	#product-img{
+background-image: url("https://images.unsplash.com/photo-1596119415004-be78a87f8d14?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=762&q=80");	
+		background-size: cover;
+		background-position: center;
+}
 
-		}
+	#warehouse-img{
+background-image: url("https://burst.shopifycdn.com/photos/white-warehouse-loading-bays.jpg?width=925&format=pjpg&exif=1&iptc=1");	
+		background-size: cover;
+		background-position: center;
+		
+	}
 
-		.weFig{
-			width: 80%;
-			margin: 0 auto;
-			background-color: rgba(10, 10, 10, 100%);
-		}
+	#companyFront-img{
+		background-image: url("https://burst.shopifycdn.com/photos/windowless-white-building.jpg?width=925&format=pjpg&exif=1&iptc=1");	
+		background-size: cover;
+		background-position: center;
+	}
 
-		.weImg{
-			width: 100%;
-		}
-
-		.weFigCap{
-			text-align: center;
-			color: rgba(252, 252, 252, 100%);
-			background-color: rgba(60,155,60,100%);
-			padding: 5px 0;
-		}
+	#charging-img{
+		background-image: url("https://burst.shopifycdn.com/photos/truck-at-loading-bay.jpg?width=925&format=pjpg&exif=1&iptc=1");	
+		background-size: cover;
+		background-position: center;	
+	}
+	
 
 </style>
+
+
+<script type="text/javascript">
+	const swiper = new Swiper('.swiper', {
+  effect: "fade",
+  // autoplay: true,
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+
+</script>
