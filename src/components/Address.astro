@@ -1,5 +1,5 @@
-<h2>Contáctanos</h2>
-<article>
+<article id="findUs-box">
+	<h2>Contáctanos</h2>
 	<section id="address-box">
 		<ul id="address-key">
 			<li>Col:</li>
@@ -10,11 +10,13 @@
 		<ul id="address-value">
 			<li>Santa Rosa</li>
 			<li>Camino a Santa Rosa NORTE #650</li>
-			<li>uruapan, Mich</li>
+			<li>Uruapan, Mich</li>
 			<li>60000</li>
 		</ul>
 	</section>
-	<a href="https://www.google.com/maps/place/EMPAQUE+DEL+MONTE+URUAPAN/@19.387084,-102.0344653,17.09z/data=!4m6!3m5!1s0x842de3d485bcf595:0x8763233e0b9f8a00!8m2!3d19.3867025!4d-102.0327894!16s%2Fg%2F11h8d1fm1p"><img id="map" src="../../public/location.png"></a>
+	<a id="map-a" href="https://www.google.com/maps/place/EMPAQUE+DEL+MONTE+URUAPAN/@19.387084,-102.0344653,17.09z/data=!4m6!3m5!1s0x842de3d485bcf595:0x8763233e0b9f8a00!8m2!3d19.3867025!4d-102.0327894!16s%2Fg%2F11h8d1fm1p">
+		<img id="map" src="../../public/location.png">
+	</a>
 	<section id="contactData">
 		<ul id="contact-key">
 			<li>
@@ -50,13 +52,22 @@
 
 <style type="text/css">
 
+	#findUs-box{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
 	h2{
+		font-size: 1.5rem;
 		text-align: center;
 	}
 
 	#address-box, #contactData{
 		display: flex;
 		line-height: 25px;
+		justify-content: center;
+
 	}
 
 	#address-key{
@@ -73,11 +84,8 @@
 	}
 
 	#map{
-		width: 100%;
-	}
-
-	#contactData{
-		justify-content: center;
+		max-width: 600px;
+		max-height: 350px;
 	}
 
 	#contact-key{
