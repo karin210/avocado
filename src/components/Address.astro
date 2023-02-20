@@ -1,4 +1,4 @@
-<h1>Contáctanos</h1>
+<h2>Contáctanos</h2>
 <article>
 	<section id="address-box">
 		<ul id="address-key">
@@ -15,15 +15,46 @@
 		</ul>
 	</section>
 	<a href="https://www.google.com/maps/place/EMPAQUE+DEL+MONTE+URUAPAN/@19.387084,-102.0344653,17.09z/data=!4m6!3m5!1s0x842de3d485bcf595:0x8763233e0b9f8a00!8m2!3d19.3867025!4d-102.0327894!16s%2Fg%2F11h8d1fm1p"><img id="map" src="../../public/location.png"></a>
-	<section>
-		
+	<section id="contactData">
+		<ul id="contact-key">
+			<li>
+				<i class="fa-solid fa-phone"></i>
+			</li>
+			<li>
+				<i class="fa-solid fa-envelope"></i>
+			</li>
+		</ul>
+		<ul id="contact-value">
+			<li>+52 452-121-6744</li>
+			<li>rh@avocados.com</li>
+		</ul>
+	</section>
+	<section id="socialData">
+		<ul>
+			<li>
+				<i class="fa-brands fa-twitter"></i>
+			</li>
+			<li>
+				<i class="fa-brands fa-facebook"></i>
+			</li>
+			<li>
+				<i class="fa-brands fa-linkedin"></i>
+			</li>
+			<li>
+				<i class="fa-brands fa-instagram"></i>
+			</li>
+		</ul>
 	</section>
 </article>
 
 
 <style type="text/css">
 
-	#address-box{
+	h2{
+		text-align: center;
+	}
+
+	#address-box, #contactData{
 		display: flex;
 		line-height: 25px;
 	}
@@ -44,4 +75,27 @@
 	#map{
 		width: 100%;
 	}
+
+	#contactData{
+		justify-content: center;
+	}
+
+	#contact-key{
+		padding: 0;
+	}
+
+	#contact-key li, #contact-value li{
+		font-size: 1.1rem;
+	}
+	#socialData ul{
+		display: flex;
+		gap: 10%;
+		justify-content: center;
+		padding: 0;
+	}
+
+	#socialData ul li{
+		font-size: 1.7rem;
+	}
+
 </style>
