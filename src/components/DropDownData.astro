@@ -63,7 +63,7 @@
 	}
 
 	.bigTxt{
-		font-size: 1.7rem;
+		font-size: clamp(1.7rem, 2vw, 2rem);
 		font-weight: bold;
 		align-self: start;
 		margin-left: 10%;
@@ -72,7 +72,7 @@
 	.weTxtHidden{
 		display: block;
 		background-color: rgba(143,241,101,90%);
-		font-size: clamp(1rem, 1vw, 1rem);
+		font-size: clamp(1rem, 1.5vw, 1.3rem);
 		margin: 0 5%;
 		border-radius: 7px;
 		text-align: center;
@@ -115,13 +115,22 @@
 	@media (min-width: 1024px) and (orientation: landscape) {
 
 		#brandInfo-box{
-			flex-flow: row ;
+			flex-flow: row wrap;
 		}
 
 		.topic{
-			height: 30vh;
-			width: 34%;
+			height: 50vh;
+			width: 50%;
 			align-items: start;
+			justify-content: center;
+		}
+
+		.topic:nth-of-type(2){
+			justify-content: center;
+		}
+		.topic:nth-of-type(3){
+			width: 100%;
+			height: 22%;
 		}
 
 		.topic i{
@@ -129,7 +138,10 @@
 		}
 
 		.weTxtHidden{
+			background-color: rgba(240, 240, 240, 90%);
 			height: auto;
+			padding: 5% 7%;
+			width: 75%;
 		}
 	}
 </style>
