@@ -19,8 +19,21 @@ const { pageName } = Astro.props
 	}
 
 	#pageH{
-		font-size: clamp(1.1rem, 1.1vw, 3rem);
+		font-size: clamp(1.1rem, 1.1vw, 1.4rem);
 		text-align: center;
 /*		background-color: transparent;*/
 	}	
+
+	/*laptop up*/
+	@media (min-width: 1024px) and (orientation: landscape) {
+
+		.pageH-box{
+			margin-top: 68px;
+	    margin-bottom: 0;
+		}
+
+		.logo-backHome{
+			display: none;
+		}
+	}
 </style>
