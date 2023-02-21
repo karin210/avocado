@@ -78,9 +78,8 @@
   // effect: "fade",
   // autoplay: true,
   // Optional parameters
-	slidesPerView: 1.5,
+	slidesPerView: 1,
 	centeredSlides: true,
-	spaceBetween:20,
   direction: 'horizontal',
   loop: true,
 
@@ -100,6 +99,13 @@
   scrollbar: {
     el: '.swiper-scrollbar',
   },
+
+  breakpoints:{
+  	1024: {
+  		slidesPerView: 1.5,
+			spaceBetween:20,
+  	},
+  }
 });
 
 </script>
