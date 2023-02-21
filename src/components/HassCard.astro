@@ -1,0 +1,175 @@
+<article id="product-article1">
+	<figure>
+		<img alt="hass avocado" src="https://cdn-icons-png.flaticon.com/512/1894/1894185.png" />
+	</figure>
+	<ul id="avoDataList">
+		<li><h3>Por cada 100 g</h3></li>
+		<li>Calorías <br>
+			<span id="calories" class="nutrients-n"></span>
+		</li>
+		<li>Grasas totales <br>
+			<span id="fat" class="nutrients-n"></span>
+		</li>
+		<li>Colesterol <br>
+			<span id="cholesterol" class="nutrients-n">0 mg</span>
+		</li>
+		<li>Sodio <br>
+			<span id="sodium" class="nutrients-n"></span>
+		</li>
+		<li>Potasio <br>
+			<span id="potassium" class="nutrients-n"></span>
+		</li>
+		<li>Hidratos de carbono <br>
+			<span id="carbs" class="nutrients-n"></span>
+		</li>
+		<li>Proteínas <br>
+			<span id="proteins" class="nutrients-n"></span>
+		</li>
+	</ul>
+	<p>El aguacate impulsa el crecimiento y reparación de la masa muscular, muchos deportistas lo consumen frecuentemente. Tiene un alto aporte de proteína, zinc y tiene dos veces más potasio que el plátano. Ayudan a la pérdida de peso corporal.</p>
+</article>
+<h1 id="num"></h1>
+
+<style type="text/css">
+	
+	#product-article1{
+		display: flex;
+		flex-flow: row wrap;
+		background-color: rgba(99,199,78,100%);
+	}
+
+	#product-article1 figure{
+		width: 40%;
+		margin: 0 auto;
+		align-self: center;
+	}
+
+	#product-article1 figure img{
+		width: 100%;
+	}
+
+	#product-article1 ul{
+		margin: 6% 0;
+		margin-right: 4%;
+	}
+
+	#avoDataList li{
+		font-weight: bold;
+		list-style: none;
+		margin: 6% 0;
+	}
+
+	#avoDataList li span{
+		font-weight: 400;
+	}
+
+	li h3{
+		font-size: 1rem;
+		margin: 0;
+	}
+
+	#product-article1 p{
+		width: 100%;
+		margin: 4% 6%;
+		text-align: center;
+		font-size: 1.05rem;
+	}
+
+
+</style>
+
+<script type="text/javascript">
+
+	const nutrientsN = document.querySelectorAll(".nutrients-n");
+//Set calories number
+		let countKcal = 0;
+
+	function addKcal(){
+		countKcal += 5;
+		nutrientsN[0].innerText = countKcal + " kcal";
+		if (countKcal === 160) {
+			stopKcal();
+		}
+	}
+	const setKcal = setInterval(addKcal, 10);
+
+	function stopKcal(){
+		clearInterval(setKcal);
+	}
+
+// setFats
+		let countFats = 0;
+	function addFats(){
+		countFats += 1;
+		nutrientsN[1].innerText = countFats + " g";
+		if (countFats === 15) {
+			stopFats();
+		}
+	}
+	const setFats = setInterval(addFats, 20);
+
+	function stopFats(){
+		clearInterval(setFats);
+	}
+
+	// setSodium
+	let countSodium = 0;
+	function addSodium(){
+		countSodium += 1;
+		nutrientsN[3].innerText = countSodium + " g";
+		if (countSodium === 15) {
+			stopSodium();
+		}
+	}
+	const setSodium = setInterval(addSodium, 20);
+
+	function stopSodium(){
+		clearInterval(setSodium);
+	}
+
+	// setPotassium
+	let countPotassium = 0;
+	function addPotassium(){
+		countPotassium += 5;
+		nutrientsN[4].innerText = countPotassium + " mg";
+		if (countPotassium === 485) {
+			stopPotassium();
+		}
+	}
+	const setPotassium = setInterval(addPotassium, 10);
+
+	function stopPotassium(){
+		clearInterval(setPotassium);
+	}
+
+	// setCarbs
+	let countCarbs = 0;
+	function addCarbs(){
+		countCarbs += 1;
+		nutrientsN[5].innerText = countCarbs + " g";
+		if (countCarbs === 9) {
+			stopCarbs();
+		}
+	}
+	const setCarbs = setInterval(addCarbs, 20);
+
+	function stopCarbs(){
+		clearInterval(setCarbs);
+	}
+
+	// setProteins
+	let countProteins = 0;
+	function addProteins(){
+		countProteins += 1;
+		nutrientsN[6].innerText = countProteins + " g";
+		if (countProteins === 2) {
+			stopProteins();
+		}
+	}
+	const setProteins = setInterval(addProteins, 20);
+
+	function stopProteins(){
+		clearInterval(setProteins);
+	}
+
+</script>
