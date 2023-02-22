@@ -41,6 +41,7 @@ background-color: white;
 
 	#product-article1 figure{
 		width: 40%;
+		max-width: 200px;
 		margin: 0 auto;
 		align-self: center;
 		animation-name: clickAvocado;
@@ -92,11 +93,11 @@ background-color: white;
 		font-weight: 300;
 		background-color: #B0F98E;
 		border-radius: 7px;
-		transition: 1s;
+		transition: 0.5s;
 	}
 
 	.showPData {
-		height: auto;
+		height: 80px;
 		padding: 5%;
 	}
 
@@ -109,10 +110,19 @@ background-color: white;
 
 /*laptop up*/
 	@media (min-width: 1024px) and (orientation: landscape){
+			
+		#product-article1 figure{
+
+		}
+
 		.avoDataList{
 			width: 38%;
-			margin: 6% 0;
-			margin-right: 4%;
+			margin: 0;
+		}
+
+		.avoDataP{
+			height: auto;
+			padding: 5%;
 		}
 	}
 
