@@ -5,25 +5,25 @@
 	<ul class="avoDataList">
 		<li><h3>Por cada 100 g</h3></li>
 		<li>Calorías <br>
-			<span id="calories" class="nutrients-n"></span>
+			<span id="calories" class="nutrients-n">160 kcal</span>
 		</li>
 		<li>Grasas totales <br>
-			<span id="fat" class="nutrients-n"></span>
+			<span id="fat" class="nutrients-n">15 g</span>
 		</li>
 		<li>Colesterol <br>
 			<span id="cholesterol" class="nutrients-n">0 mg</span>
 		</li>
 		<li>Sodio <br>
-			<span id="sodium" class="nutrients-n"></span>
+			<span id="sodium" class="nutrients-n">15 g</span>
 		</li>
 		<li>Potasio <br>
-			<span id="potassium" class="nutrients-n"></span>
+			<span id="potassium" class="nutrients-n">485 mg</span>
 		</li>
 		<li>Hidratos de carbono <br>
-			<span id="carbs" class="nutrients-n"></span>
+			<span id="carbs" class="nutrients-n">9 g</span>
 		</li>
 		<li>Proteínas <br>
-			<span id="proteins" class="nutrients-n"></span>
+			<span id="proteins" class="nutrients-n">2 g</span>
 		</li>
 	</ul>
 	<p class="avoDataP">El aguacate impulsa el crecimiento y reparación de la masa muscular, muchos deportistas lo consumen frecuentemente. Tiene un alto aporte de proteína, zinc y tiene dos veces más potasio que el plátano. Ayudan a la pérdida de peso corporal.</p>
@@ -35,8 +35,6 @@
 	#product-article1{
 		display: flex;
 		flex-flow: row wrap;
-/*		background-color: rgba(99,199,78,100%);*/
-background-color: white;
 	}
 
 	#product-article1 figure{
@@ -55,7 +53,7 @@ background-color: white;
 	}
 
 	.avoDataList{
-		font-size: 0.8rem;
+		font-size: clamp(0.8rem, 1.2vw, 1rem);
 		width: 0;
 		overflow: hidden;
 		padding: 0;
@@ -89,8 +87,7 @@ background-color: white;
 		margin: 4% 6%;
 		overflow: hidden;
 		text-align: center;
-		font-size: 0.8rem;
-		font-weight: 300;
+		font-size: clamp(0.8rem, 1.5vw, 1.4rem);
 		background-color: #B0F98E;
 		border-radius: 7px;
 		transition: 0.5s;
@@ -111,18 +108,22 @@ background-color: white;
 /*laptop up*/
 	@media (min-width: 1024px) and (orientation: landscape){
 			
-		#product-article1 figure{
-
+		#product-article1{
+			flex-wrap: nowrap;
+			background-color: rgba(180, 180, 180, 100%);
+			align-items: center;
+			padding: 5%;
 		}
 
 		.avoDataList{
-			width: 38%;
+			width: auto;
 			margin: 0;
 		}
 
 		.avoDataP{
+			width: 30%;
 			height: auto;
-			padding: 5%;
+			padding: 2% 2%;
 		}
 	}
 
