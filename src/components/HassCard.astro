@@ -1,8 +1,8 @@
 <article id="product-article1">
-	<figure>
+	<figure id="avocado-animated">
 		<img alt="hass avocado" src="https://cdn-icons-png.flaticon.com/512/1894/1894185.png" />
 	</figure>
-	<ul id="avoDataList">
+	<ul class="avoDataList">
 		<li><h3>Por cada 100 g</h3></li>
 		<li>Calorías <br>
 			<span id="calories" class="nutrients-n"></span>
@@ -52,7 +52,7 @@
 		width: 100%;
 	}
 
-	#product-article1 ul{
+	.avoDataList{
 		width: 0;
 		overflow: hidden;
 /*		margin: 6% 0;*/
@@ -60,13 +60,19 @@
 		padding: 0;
 	}
 
-	#avoDataList li{
+	.showListData{
+		width: auto;
+		margin: 6% 0;
+		margin-right: 4%;
+	}
+
+	.avoDataList li{
 		font-weight: bold;
 		list-style: none;
 		margin: 6% 0;
 	}
 
-	#avoDataList li span{
+	.avoDataList li span{
 		font-weight: 400;
 	}
 
@@ -190,4 +196,20 @@
 		clearInterval(setProteins);
 	}
 
+// show avocado benefits
+	const avo = document.querySelector("#avocado-animated");
+	const nutrientsData = document.querySelector(".avoDataList");
+	avo.addEventListener("touchstart", avoData);
+
+	let showDataList = false;
+	function avoData(){
+		if(!showDataList){
+		nutrientsData.classList.add("showListData");
+		showDataList = !showDataList;
+		} else {
+			nutrientsData.classList.remove("showListData");
+					showDataList = !showDataList;
+
+		}
+	}
 </script>
