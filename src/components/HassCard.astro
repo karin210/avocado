@@ -26,7 +26,7 @@
 			<span id="proteins" class="nutrients-n"></span>
 		</li>
 	</ul>
-	<p>El aguacate impulsa el crecimiento y reparación de la masa muscular, muchos deportistas lo consumen frecuentemente. Tiene un alto aporte de proteína, zinc y tiene dos veces más potasio que el plátano. Ayudan a la pérdida de peso corporal.</p>
+	<p class="avoDataP">El aguacate impulsa el crecimiento y reparación de la masa muscular, muchos deportistas lo consumen frecuentemente. Tiene un alto aporte de proteína, zinc y tiene dos veces más potasio que el plátano. Ayudan a la pérdida de peso corporal.</p>
 </article>
 <h1 id="num"></h1>
 
@@ -81,7 +81,7 @@
 		margin: 0;
 	}
 
-	#product-article1 p{
+	.avoDataP{
 		width: 100%;
 		height: 0;
 		overflow: hidden;
@@ -89,8 +89,12 @@
 		text-align: center;
 		font-size: 1.05rem;
 		background-color: ghostwhite;
-/*		padding: 5%;*/
 		border-radius: 7px;
+	}
+
+	.showPData {
+		height: auto;
+		padding: 5%;
 	}
 
 	@keyframes clickAvocado{
@@ -105,6 +109,7 @@
 <script type="text/javascript">
 
 	const nutrientsN = document.querySelectorAll(".nutrients-n");
+	const avoDataP = document.querySelector(".avoDataP");
 //Set calories number
 		let countKcal = 0;
 
@@ -209,7 +214,22 @@
 		} else {
 			nutrientsData.classList.remove("showListData");
 					showDataList = !showDataList;
-
 		}
+
+		function showDataP(){
+			console.log(showDataList);
+			if(showDataList){
+			avoDataP.classList.add("showPData");
+			} else {
+				avoDataP.classList.remove("showPData");			
+			}
+		}
+			showDataP();
 	}
+
+
+
+
+
+
 </script>
