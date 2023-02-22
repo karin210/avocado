@@ -113,16 +113,20 @@ background-color: white;
 	const nutrientsN = document.querySelectorAll(".nutrients-n");
 	const avoDataP = document.querySelector(".avoDataP");
 //Set calories number
-		let countKcal = 0;
 
-	function addKcal(){
+
+		function triggerAvoData(){
+		avoData();
+
+		let countKcal = 0;
+		function addKcal(){
 		countKcal += 5;
 		nutrientsN[0].innerText = countKcal + " kcal";
 		if (countKcal === 160) {
 			stopKcal();
 		}
 	}
-	const setKcal = setInterval(addKcal, 10);
+		const setKcal = setInterval(addKcal, 10);
 
 	function stopKcal(){
 		clearInterval(setKcal);
@@ -137,8 +141,7 @@ background-color: white;
 			stopFats();
 		}
 	}
-	const setFats = setInterval(addFats, 20);
-
+		const setFats = setInterval(addFats, 20);
 	function stopFats(){
 		clearInterval(setFats);
 	}
@@ -202,11 +205,13 @@ background-color: white;
 	function stopProteins(){
 		clearInterval(setProteins);
 	}
+		}
+	
 
 // show avocado benefits
 	const avo = document.querySelector("#avocado-animated");
 	const nutrientsData = document.querySelector(".avoDataList");
-	avo.addEventListener("touchstart", avoData);
+	avo.addEventListener("touchstart", triggerAvoData);
 
 	let showDataList = false;
 	function avoData(){
