@@ -2,49 +2,144 @@
 <section id="sizes-box">
 	<h1>Calibres</h1>
 	<ul id="countries">
-		<li class="usa">USA <br>
-		<table class="usaSizesTb">
-			<tr>
-				<th>Calibre</th>
-				<th>Gramos</th>
-			</tr>
-			<tr>
-				<td>32</td>
-				<td>+330</td>
-			</tr>
-			<tr>
-				<td>36</td>
-				<td>300-330</td>
-			</tr>
-			<tr>
-				<td>40</td>
-				<td>265-300</td>
-			</tr>
-			<tr>
-				<td>48</td>
-				<td>205-265</td>
-			</tr>
-			<tr>
-				<td>60</td>
-				<td>170-205</td>
-			</tr>
-			<tr>
-				<td>70</td>
-				<td>150-170</td>
-			</tr>
-			<tr>
-				<td>84</td>
-				<td>120-150</td>
-			</tr>
-		</table>
-		<i class="fa-solid fa-circle-chevron-down"></i>
-	</li>
-		<li class="japon">Japón <br>
-		<i class="fa-solid fa-circle-chevron-down"></i></li>
-		<li class="canada">Canadá <br>
-		<i class="fa-solid fa-circle-chevron-down"></i></li>
-		<li class="maxico">México <br>
-		<i class="fa-solid fa-circle-chevron-down"></i></li>
+		<li class="country usa">USA
+			<div class="sizesTb-Box">
+				<table class="usaSizesTb sizesTb">
+					<tr>
+						<th>Calibre</th>
+						<th>Gramos</th>
+					</tr>
+					<tr>
+						<td>32</td>
+						<td>+330</td>
+					</tr>
+					<tr>
+						<td>36</td>
+						<td>300-330</td>
+					</tr>
+					<tr>
+						<td>40</td>
+						<td>265-300</td>
+					</tr>
+					<tr>
+						<td>48</td>
+						<td>205-265</td>
+					</tr>
+					<tr>
+						<td>60</td>
+						<td>170-205</td>
+					</tr>
+					<tr>
+						<td>70</td>
+						<td>150-170</td>
+					</tr>
+					<tr>
+						<td>84</td>
+						<td>120-150</td>
+					</tr>
+				</table>
+			</div>
+			<i class="sizes-i fa-solid fa-circle-chevron-down"></i>
+		</li>
+		<li class="country japan">Japón
+			<div class="sizesTb-Box">
+				<table class="japSizesTb sizesTb">
+					<tr>
+					<th>Calibre</th>
+					<th>Gramos</th>
+					</tr>
+					<tr>
+						<td>18</td>
+						<td>330-340</td>
+					</tr>
+					<tr>
+						<td>20</td>
+						<td>285-236</td>
+					</tr>
+					<tr>
+						<td>24</td>
+						<td>235-285</td>
+					</tr>
+					<tr>
+						<td>30</td>
+						<td>180-235</td>
+					</tr>
+					<tr>
+						<td>35</td>
+						<td>160-180</td>
+					</tr>
+				</table>
+			</div>
+			<i class="sizes-i fa-solid fa-circle-chevron-down"></i>
+		</li>
+		<li class="country canada">Canadá
+			<div class="sizesTb-Box">
+				<table class="canSizesTb sizesTb">
+					<tr>
+						<th>Calibre</th>
+						<th>Gramos</th>
+					</tr>
+					<tr>
+						<td>12</td>
+						<td>+330</td>
+					</tr>
+					<tr>
+						<td>14</td>
+						<td>300-330</td>
+					</tr>
+					<tr>
+						<td>16</td>
+						<td>265-300</td>
+					</tr>
+					<tr>
+						<td>18</td>
+						<td>205-265</td>
+					</tr>
+					<tr>
+						<td>22</td>
+						<td>170-205</td>
+					</tr>
+					<tr>
+						<td>24</td>
+						<td>150-170</td>
+					</tr>
+					<tr>
+						<td>26</td>
+						<td>120-150</td>
+					</tr>
+				</table>
+			</div>
+			<i class="sizes-i fa-solid fa-circle-chevron-down"></i></li>
+		<li class="country maxico">México <br>
+			<div class="sizesTb-Box">
+				<table class="mexSizesTb sizesTb">
+					<tr>
+						<th>Calibre</th>
+						<th>Gramos</th>
+					</tr>
+					<tr>
+						<td>S. Extra</td>
+						<td>+260</td>
+					</tr>
+					<tr>
+						<td>Extra</td>
+						<td>220-260</td>
+					</tr>
+					<tr>
+						<td>Primera</td>
+						<td>175-220</td>
+					</tr>
+					<tr>
+						<td>Mediano</td>
+						<td>145-220</td>
+					</tr>
+					<tr>
+						<td>Tercera</td>
+						<td>100-145</td>
+					</tr>
+				</table>
+			</div>
+			<i class="sizes-i fa-solid fa-circle-chevron-down"></i></li>
 	</ul>
 </section>
 
@@ -78,24 +173,66 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-/*		gap: 10px;*/
+		gap: 20px;
 		color: rgba(22, 22, 22, 100%);
-/*		border: 1px solid;*/
 		width: 80%;
 	}
 
-	li i {
-/*		color:green	*/
+	.sizesTb-Box{
+		height: 0;
+		overflow: hidden;
+		transition: 1s;
 	}
 
+	.showTab{
+		height: 180px;
+	}
 
+	.showTabJap{
+		height: 140px;
+	}
 
-	.usaSizesTb th{
+	.sizesTb th{
 		font-size: 1rem;
 	}
 
-	.usaSizesTb tr td{
+	.sizesTb tr td{
 		font-size: 1rem;
 		font-weight: 400;
 	}
 </style>
+
+<script type="text/javascript">
+	const arrowSize = document.querySelectorAll(".sizes-i");
+	const countriesTab = document.querySelectorAll(".sizesTb-Box");
+
+	let showSizes = false;
+	for(i = 0; i < 4; i++){
+		arrowSize[i].addEventListener("click", function (e){
+			if(!showSizes){
+				if(e.target === arrowSize[0]){
+					countriesTab[0].classList.add("showTab");
+				}	else if(e.target === arrowSize[1]){
+						countriesTab[1].classList.add("showTabJap");
+					} else if(e.target === arrowSize[2]){
+						countriesTab[2].classList.add("showTab");
+					} else if(e.target === arrowSize[3]){
+						countriesTab[3].classList.add("showTabJap");
+					}
+					showSizes = !showSizes;
+			} else {
+				if(e.target === arrowSize[0]){
+					countriesTab[0].classList.remove("showTab");
+				} else if(e.target === arrowSize[1]){
+						countriesTab[1].classList.remove("showTabJap");
+					} else if(e.target === arrowSize[2]){
+						countriesTab[2].classList.remove("showTab");
+						} else if(e.target === arrowSize[3]){
+						countriesTab[3].classList.remove("showTabJap");
+							}
+					showSizes = !showSizes;
+				}
+
+		});
+	}
+</script>
