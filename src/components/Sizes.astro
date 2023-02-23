@@ -206,33 +206,50 @@
 	const arrowSize = document.querySelectorAll(".sizes-i");
 	const countriesTab = document.querySelectorAll(".sizesTb-Box");
 
-	let showSizes = false;
+	let usaSizes = false;
+	let japSizes = false;
+	let canSizes = false;
+	let mexSizes = false;
+
+
 	for(i = 0; i < 4; i++){
-		arrowSize[i].addEventListener("click", function (e){
-			if(!showSizes){
-				if(e.target === arrowSize[0]){
-					countriesTab[0].classList.add("showTab");
-				}	else if(e.target === arrowSize[1]){
-						countriesTab[1].classList.add("showTabJap");
-					} else if(e.target === arrowSize[2]){
-						countriesTab[2].classList.add("showTab");
-					} else if(e.target === arrowSize[3]){
-						countriesTab[3].classList.add("showTabJap");
-					}
-					showSizes = !showSizes;
-			} else {
-				if(e.target === arrowSize[0]){
+		arrowSize[i].addEventListener("touchstart", function (e){
+			// USA sizes
+			if(e.target === arrowSize[0] && !usaSizes){
+				countriesTab[0].classList.add("showTab");
+				usaSizes = !usaSizes;
+			} else if(e.target === arrowSize[0] && usaSizes){
 					countriesTab[0].classList.remove("showTab");
-				} else if(e.target === arrowSize[1]){
-						countriesTab[1].classList.remove("showTabJap");
-					} else if(e.target === arrowSize[2]){
-						countriesTab[2].classList.remove("showTab");
-						} else if(e.target === arrowSize[3]){
-						countriesTab[3].classList.remove("showTabJap");
-							}
-					showSizes = !showSizes;
+					usaSizes = !usaSizes;
 				}
 
+				// Japan sizes
+			else if(e.target === arrowSize[1] && !japSizes){
+				countriesTab[1].classList.add("showTabJap");
+				japSizes = !japSizes;
+			} else if(e.target === arrowSize[1] && japSizes){
+					countriesTab[1].classList.remove("showTabJap");
+					japSizes = !japSizes;
+				}
+
+				// Canada sizes
+			else if(e.target === arrowSize[2] && !canSizes){
+				countriesTab[2].classList.add("showTab");
+				canSizes = !canSizes;
+			} else if(e.target === arrowSize[2] && canSizes){
+					countriesTab[2].classList.remove("showTab");
+					canSizes = !canSizes;
+				}
+
+				// Mexico sizes
+			else if(e.target === arrowSize[3] && !mexSizes){
+				countriesTab[3].classList.add("showTabJap");
+				mexSizes = !mexSizes;
+			} else if(e.target === arrowSize[3] && mexSizes){
+					countriesTab[3].classList.remove("showTabJap");
+					mexSizes = !mexSizes;
+				}
 		});
 	}
+	
 </script>
