@@ -94,7 +94,7 @@
 	}
 
 	.weTxtShow-story{
-		height: 300px;
+		height: 320px;
 		padding: 10% 3%;
 	}
 
@@ -156,43 +156,53 @@
 	const arrowBtns = document.querySelectorAll(".fa-circle-chevron-down");
 	const descriptions = document.querySelectorAll(".weTxtHidden");
 	const last = document.querySelector(".storyP");
-	console.log(descriptions);
 
-	let openTxt = false;
+	let openMission = false;
+	let openVision = false;
+	let openStory = false;
+
 	for(i = 0; i < arrowBtns.length; i++){
 		arrowBtns[i].addEventListener("touchstart", function (e) {
-			// open text
-			if(!openTxt){
-				if(e.target === arrowBtns[0]){
-					descriptions[0].classList.add("weTxtShow-mission");
-					arrowBtns[0].classList.add("arrowUp");
-				} else if(e.target === arrowBtns[1]){
-						descriptions[1].classList.add("weTxtShow-vision");
-						arrowBtns[1].classList.add("arrowUp");
-					} else if(e.target === arrowBtns[2]) {
-						descriptions[2].classList.add("weTxtShow-story");
-						arrowBtns[2].classList.add("arrowUp");
-						}
-				openTxt = !openTxt;
+			// open mission
+			if(!openMission && e.target === arrowBtns[0]){
+				descriptions[0].classList.add("weTxtShow-mission");
+				arrowBtns[0].classList.add("arrowUp");
+				openMission = !openMission;
 			}
-			 // close text 
-			else{
-				if(e.target === arrowBtns[0]){				
-					descriptions[0].classList.remove("weTxtShow-mission");
-					arrowBtns[0].classList.remove("arrowUp");
-				} else if(e.target === arrowBtns[1]){
-						descriptions[1].classList.remove("weTxtShow-vision");
-						arrowBtns[1].classList.remove("arrowUp");
-					} else if(e.target === arrowBtns[2]) {
-						descriptions[2].classList.remove("weTxtShow-story");
-						arrowBtns[2].classList.remove("arrowUp");
-						}
-				openTxt = !openTxt;
+			 // close mission 
+			else if(openMission && e.target === arrowBtns[0]){
+				descriptions[0].classList.remove("weTxtShow-mission");
+				arrowBtns[0].classList.remove("arrowUp");
+				openMission = !openMission;
+			}
+
+
+			// open vision
+			else if(!openVision && e.target === arrowBtns[1]){
+				descriptions[1].classList.add("weTxtShow-vision");
+				arrowBtns[1].classList.add("arrowUp");
+				openVision = !openVision;
+			}
+			 // close vision 
+			else if(openVision && e.target === arrowBtns[1]){		descriptions[1].classList.remove("weTxtShow-vision");
+				arrowBtns[1].classList.remove("arrowUp");
+				openVision = !openVision;
+			}
+
+			// open story
+			else if(!openStory && e.target === arrowBtns[2]){
+				descriptions[2].classList.add("weTxtShow-story");
+				arrowBtns[2].classList.add("arrowUp");
+				openStory = !openStory;
+			}
+			 // close story 
+			else if(openStory && e.target === arrowBtns[2]){	
+				descriptions[2].classList.remove("weTxtShow-story");
+				arrowBtns[2].classList.remove("arrowUp");
+				openStory = !openStory;
 			}
 			
-				
-			
-		})
+		});
 	}
 	
 
