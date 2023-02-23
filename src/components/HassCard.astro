@@ -120,7 +120,20 @@
 		#product-article1{
 			flex-wrap: nowrap;
 			align-items: center;
+			background-color: transparent;
 		}
+
+		#product-article1:before{
+		content: "";
+		background-image: url("https://www.msc.com/-/media/images/msc-cargo/sectors/agriculture/fruit/msc21006567/msc21006567/msc21006567_s.jpg?w=1920&hash=22FBB148ECEA395E4CA528C4BA186B21");
+		background-attachment: fixed;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		z-index: -1;
+	}
 
 		.avoDataList{
 			width: auto;
@@ -132,6 +145,10 @@
 			height: auto;
 			padding: 2% 2%;
 			margin-top: 0;
+			font-weight: bold;
+			font-size: 1.2rem;
+			color: whitesmoke;
+			background-color: transparent;
 		}
 	}
 
