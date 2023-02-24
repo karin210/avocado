@@ -1,9 +1,9 @@
 ---
-const { pageName } = Astro.props
+const { pageName, className } = Astro.props
 ---
 <div class="pageH-box">
 	<img alt="logo" class="logo-backHome" src="https://avocado.com.au/wp-content/uploads/2020/10/avocado-logo-yoast-seo-1.png">	
-	<h1 id="pageH">{pageName}</h1>
+	<h1 id="pageH" class={className}>{pageName}</h1>
 </div>
 <style type="text/css">
 
@@ -35,5 +35,10 @@ const { pageName } = Astro.props
 		.logo-backHome{
 			display: none;
 		}
+
+		.productoH{
+			color: white;
+		}
+
 	}
 </style>

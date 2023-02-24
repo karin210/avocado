@@ -162,7 +162,7 @@
 
 	}
 
-	#countries li {
+	.country {
 		list-style: none;
 		padding: 20px 0;
 		font-size: 1.5rem;
@@ -199,6 +199,31 @@
 	.sizesTb tr td{
 		font-size: 1rem;
 		font-weight: 400;
+	}
+
+	/*laptop up*/
+	@media (min-width: 1024px) and (orientation: landscape){
+
+		#countries{
+			gap: 60px;
+		}
+
+		.country{
+			width: 30%;
+			height: 33vh;
+			background-color: #FEFEDA;
+		}
+
+		.sizesTb-Box{
+			height: auto;
+		}
+
+		.country i {
+			display: none;
+		}
+
+		
+
 	}
 </style>
 

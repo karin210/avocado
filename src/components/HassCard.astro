@@ -46,7 +46,6 @@
 		width: 40%;
 		max-width: 200px;
 		margin: auto;
-/*		margin-top: 25%;*/
 		animation-name: clickAvocado;
 		animation-duration: 4s;
 		animation-iteration-count: infinite;
@@ -75,6 +74,7 @@
 
 	.avoDataList li{
 		font-weight: bold;
+		font-size: 1.3rem;
 		list-style: none;
 		margin: 6% 0;
 	}
@@ -94,7 +94,7 @@
 		margin: 0 6%;
 		overflow: hidden;
 		text-align: center;
-		font-size: clamp(0.8rem, 1.5vw, 1.4rem);
+		font-size: clamp(0.8rem, 1.5vw, 1.3rem);
 		font-weight: 400;
 		background-color: #B0F98E;
 		border-radius: 7px;
@@ -125,8 +125,11 @@
 
 		#product-article1:before{
 		content: "";
-		background-image: url("https://www.msc.com/-/media/images/msc-cargo/sectors/agriculture/fruit/msc21006567/msc21006567/msc21006567_s.jpg?w=1920&hash=22FBB148ECEA395E4CA528C4BA186B21");
+		background-image: url("https://industry.nzavocado.co.nz/wp-content/uploads/2018/11/Orchard-e1542588178511.jpg");
+		background-size: cover;
+		background-position: center;
 		background-attachment: fixed;
+		filter: brightness(0.8);
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -140,13 +143,27 @@
 			margin: 0;
 		}
 
+		.avoDataList li{
+			font-size: 1.4rem;
+
+		}
+
+		.avoDataList li span{
+			font-size: 1.4rem;
+		}
+
+		li h3{
+			font-size: 1.5rem;
+		}
+
 		.avoDataP{
 			width: 30%;
 			height: auto;
 			padding: 2% 2%;
 			margin-top: 0;
 			font-weight: bold;
-			font-size: 1.2rem;
+			font-size: 1.8rem;
+			font-family: 'Open Sans', sans-serif;
 			color: whitesmoke;
 			background-color: transparent;
 		}
