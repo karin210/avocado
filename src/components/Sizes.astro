@@ -157,7 +157,7 @@
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: center;
-		padding: 0;
+		padding: 0;	
 		gap: 40px;
 
 	}
@@ -212,20 +212,6 @@
 			padding: 2% 0;
 		}
 
-		/*#countries::before{
-			content: "";
-			position: absolute;
-			top: 107%;
-			left: 0;
-			width: 100%;
-			height: 90vh;
-			background-image: url("https://www.semana.com/resizer/L3kx5GiAc2lFyNDCodwFREZdUS8=/1920x0/smart/filters:format(jpg):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/semana/6F2PSKOYUVATFP4WZX56RY6ONA.jpg");
-			background-size: cover;
-			background-position: center;
-			background-attachment: fixed;
-			z-index: -1;
-		}*/
-
 		#sizes-box h1{
 			background-color: #0D0D0D;
 			color: #FCFCFC;
@@ -249,11 +235,9 @@
 		.sizesTb tr th{
 			font-size: 1.3rem;
 			padding: 0 8px;
-/*			color: #FCFCFC;*/
 		}
 
 		.sizesTb tr td{
-/*			color: #FCFCFC;*/
 			font-size: 1.3rem;
 			text-align: center;
 		}
@@ -263,8 +247,9 @@
 </style>
 
 <script type="text/javascript">
-	const arrowSize = document.querySelectorAll(".sizes-i");
 	const countriesTab = document.querySelectorAll(".sizesTb-Box");
+
+	const country = document.querySelectorAll(".country");
 
 	let usaSizes = false;
 	let japSizes = false;
@@ -273,39 +258,39 @@
 
 
 	for(i = 0; i < 4; i++){
-		arrowSize[i].addEventListener("touchstart", function (e){
+		country[i].addEventListener("touchstart", function (e){
 			// USA sizes
-			if(e.target === arrowSize[0] && !usaSizes){
+			if(e.target === country[0] && !usaSizes){
 				countriesTab[0].classList.add("showTab");
 				usaSizes = !usaSizes;
-			} else if(e.target === arrowSize[0] && usaSizes){
+			} else if(e.target === country[0] && usaSizes){
 					countriesTab[0].classList.remove("showTab");
 					usaSizes = !usaSizes;
 				}
 
 				// Japan sizes
-			else if(e.target === arrowSize[1] && !japSizes){
+			else if(e.target === country[1] && !japSizes){
 				countriesTab[1].classList.add("showTabJap");
 				japSizes = !japSizes;
-			} else if(e.target === arrowSize[1] && japSizes){
+			} else if(e.target === country[1] && japSizes){
 					countriesTab[1].classList.remove("showTabJap");
 					japSizes = !japSizes;
 				}
 
 				// Canada sizes
-			else if(e.target === arrowSize[2] && !canSizes){
+			else if(e.target === country[2] && !canSizes){
 				countriesTab[2].classList.add("showTab");
 				canSizes = !canSizes;
-			} else if(e.target === arrowSize[2] && canSizes){
+			} else if(e.target === country[2] && canSizes){
 					countriesTab[2].classList.remove("showTab");
 					canSizes = !canSizes;
 				}
 
 				// Mexico sizes
-			else if(e.target === arrowSize[3] && !mexSizes){
+			else if(e.target === country[3] && !mexSizes){
 				countriesTab[3].classList.add("showTabJap");
 				mexSizes = !mexSizes;
-			} else if(e.target === arrowSize[3] && mexSizes){
+			} else if(e.target === country[3] && mexSizes){
 					countriesTab[3].classList.remove("showTabJap");
 					mexSizes = !mexSizes;
 				}
