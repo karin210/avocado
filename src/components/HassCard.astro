@@ -122,8 +122,10 @@
 		}
 
 
-		#avocado-animated{
+		#avocado-animated img{
 			transition: 0.5s;
+			animation-name: startProducto;
+			animation-duration: 1s;
 		}
 
 		#avocado-animated::before{
@@ -137,6 +139,11 @@
 		.avoDataList{
 			width: auto;
 			margin: 0;
+			margin-top: 1700px;
+			animation-name: startProducto;
+		animation-duration: 1s;
+		animation-delay: 0.32s;
+		animation-fill-mode: forwards;
 		}
 
 		.avoDataList li{
@@ -162,6 +169,16 @@
 			font-family: 'Comfortaa', sans-serif;
 			background-color: transparent;
 			color: rgba(143, 241, 101, 80%);
+		margin-top: 1700px;
+			animation-name: startProducto;
+		animation-duration: 1s;
+		animation-delay: 0.64s;
+		animation-fill-mode: forwards;	
+		}
+
+		@keyframes startProducto{
+			from{margin-top: 1700px;}
+			to{margin-top: 0;}
 		}
 	}
 
