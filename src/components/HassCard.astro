@@ -1,4 +1,5 @@
 <article id="product-article1">
+	<span class="avoQuote">El aguacate es genial!</span>
 	<figure id="avocado-animated">
 		<img alt="hass avocado" src="https://cdn-icons-png.flaticon.com/512/7932/7932854.png" />
 	</figure>
@@ -38,6 +39,10 @@
 		flex-flow: row wrap;
 		background: #FCFCFC;
 		height: 100vh;
+	}
+
+	.avoQuote{
+		display: none;
 	}
 
 	#product-article1 figure{
@@ -121,15 +126,32 @@
 			height: 89.5vh;
 		}
 
+		
+		.avoQuote{
+		/*	background-color: darkred;
+			width: 150px;
+			height: 75px;
+			border-radius: 5px;
+			position: absolute;
+		    top: 27%;
+		    left: 15%;*/
+    	}
+
+    	.avoQuote::before{
+    		content: "";
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-top: 100px solid darkred;
+          position: absolute;
+    top: 11px;
+    left: 49px;
+    z-index: -1;
+    	}
 
 		#avocado-animated img{
 			transition: 0.5s;
 			animation-name: startProducto;
 			animation-duration: 1s;
-		}
-
-		#avocado-animated::before{
-
 		}
 
 		#avocado-animated:hover{
@@ -312,7 +334,7 @@
 
 
 
-
-
-
 </script>
+
+
+<!-- Create feature on click on avocado show a quote -->
