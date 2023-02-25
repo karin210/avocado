@@ -37,7 +37,8 @@
 					<td>84</td>
 					<td>120-150</td>
 				</tr>
-			</table>
+			</table><br>
+			<i class="fa-solid fa-angle-up"></i>
 		</div>
 		<div class="country">
 			<h1 class="country-h1">Japón</h1>
@@ -66,7 +67,8 @@
 					<td>35</td>
 					<td>160-180</td>
 				</tr>
-			</table>
+			</table><br>
+			<i class="fa-solid fa-angle-up"></i>
 		</div>
 		<div class="country">
 			<h1 class="country-h1">Canadá</h1>
@@ -103,7 +105,8 @@
 					<td>26</td>
 					<td>120-150</td>
 				</tr>
-			</table>
+			</table><br>
+			<i class="fa-solid fa-angle-up"></i>
 		</div>
 		<div class="country">
 			<h1 class="country-h1">México</h1>
@@ -132,12 +135,17 @@
 					<td>Tercera</td>
 					<td>100-145</td>
 				</tr>
-			</table>
+			</table><br>
+			<i class="fa-solid fa-angle-up"></i>
 		</div>
 	</section>
 </section>
 
 <style type="text/css">
+
+	#sizes-section h1{
+		text-align: center;
+	}
 
 	.countiesContainer{
 		display: flex;
@@ -169,7 +177,7 @@
 	}
 
 	.showTabJap{
-		height: 250px;
+		height: 260px;
 	}
 
 	.sizesTb{
@@ -243,13 +251,13 @@
 	const countryh1 = document.querySelectorAll(".country-h1");
 	const table = document.querySelectorAll(".sizesTb");
 	const country = document.querySelectorAll(".country");
-
+	const closeTab = document.querySelectorAll(".fa-angle-up")
 
 	let usaSizes = false;
 	let japSizes = false;
 	let canSizes = false;
 	let mexSizes = false;
-
+	
 
 	for(i = 0; i < 4; i++){
 		countryh1[i].addEventListener("touchstart", function (e){
@@ -292,5 +300,36 @@
 				}
 		});
 	}
+
+		for(i = 0; i < closeTab.length; i++){
+			closeTab[i].addEventListener("touchstart", function (e) {
+
+				// close USA sizes
+				if(e.target === closeTab[0]){
+					country[0].classList.remove("showTabUSA");
+					table[0].classList.remove("showSizesTb");
+					usaSizes = !usaSizes;
+
+					// close Japan sizes
+				} else if(e.target === closeTab[1]){
+					country[1].classList.remove("showTabJap");
+					japSizes = !japSizes;
+
+					// close Canada sizes
+				}  else if(e.target === closeTab[2]){
+					country[2].classList.remove("showTabUSA");
+					canSizes = !canSizes;
+
+					// close México
+				}  else if(e.target === closeTab[3]){
+					country[3].classList.remove("showTabJap");
+					mexSizes = !mexSizes;
+				} 
+
+
+			});
+		}
+
+		
 	
 </script>
