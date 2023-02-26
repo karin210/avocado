@@ -1,5 +1,5 @@
 <section id="recipes">
-	<article class="recipe">
+	<article class="recipe" id="guacamole">
 		<img src="https://www.giallozafferano.com/images/255-25549/Guacamole_1200x800.jpg" class="recipe-img" />
 		<h2>Guacamole</h2>
 		<div class="recipe-details">
@@ -33,7 +33,7 @@
 		</div>
 		<i class="fa-solid fa-angle-up"></i>
 	</article>
-	<article class="recipe">
+	<article class="recipe" id="avoBreakFast">
 		<img src="https://images.unsplash.com/photo-1544378828-5a7e2e02c2fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1092&q=80" class="recipe-img"/>
 		<h2>Desayuno de aguacate</h2>
 		<div class="recipe-details">
@@ -69,7 +69,7 @@
 		</div>
 		<i class="fa-solid fa-angle-up"></i>
 	</article>
-	<article class="recipe">
+	<article class="recipe" id="avoTapas">
 		<img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F9021591.jpg&q=60&c=sc&orient=true&poi=auto&h=512" class="recipe-img"/>
 		<h2>Tapas de aguacate con atún</h2>
 		<div class="recipe-details">
@@ -102,7 +102,7 @@
 		</div>
 		<i class="fa-solid fa-angle-up"></i>
 	</article>
-	<article class="recipe">
+	<article class="recipe" id="avoStrawb">
 		<img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F8967857.jpg&q=60&c=sc&orient=true&poi=auto&h=512" class="recipe-img"/>
 		<h2>Ensalada de aguacate y fresa</h2>
 		<div class="recipe-details">
@@ -155,11 +155,15 @@
 		display: flex;
 		flex-direction: column;
 		width: 70%;
+		height: 900px;
+		overflow: hidden;
 		padding-bottom: 5%;
 		border: 2px solid #afafaf;
 		border-radius: 5px;
 
 	}
+
+	.aguacate{}
 
 	.recipe-img{
 		width: 100%;
