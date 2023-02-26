@@ -29,7 +29,7 @@
 					<li>Paso 1 <br>
 					Aplasta el aguacate junto al jugo de limón y la sal en un recipiente mediano.</li>
 					<li>Paso 2 <br>
-					Añade los vegetales picados y mezclalos</li>
+					Añade los vegetales picados y mézclalos</li>
 				</ul>
 			</div>
 		</div>
@@ -180,15 +180,15 @@
 	}
 
 	.showAvoBreakFast{
-		height: 1000px;
+		height: 702px;
 	}
 
 	.showAvoTapas{
-		height: 1050px;
+		height: 650px;
 	}
 
 	.showAvoStrawb{
-		height: 1140px;
+		height: 730px;
 	}
 
 	.recipe-img{
@@ -251,11 +251,15 @@
 	const recipeMain = document.querySelectorAll(".recipe-main");
 
 	let open1 = false;
+	let open2 = false;
+	let open3 = false;
+	let open4 = false;
 	for(let i = 0; i < openRecipeArrow.length; i++){
 		openRecipeArrow[i].addEventListener("touchstart", openRecipe);
 	}
 	
 	function openRecipe(e){
+		// open 1st recipe
 		if(e.target === openRecipeArrow[0] && !open1){
 			recipeMain[0].classList.add("showGuacamole");
 			openRecipeArrow[0].classList.add("invertChevron");
@@ -264,6 +268,36 @@
 			recipeMain[0].classList.remove("showGuacamole");
 			openRecipeArrow[0].classList.remove("invertChevron");
 			open1 = !open1;
+
+			// open 2nd recipe
+		} else if(e.target === openRecipeArrow[1] && !open2){
+			recipeMain[1].classList.add("showAvoBreakFast");
+			openRecipeArrow[1].classList.add("invertChevron");
+			open2 = !open2;
+			} else if(e.target === openRecipeArrow[1] && open2){
+			recipeMain[1].classList.remove("showAvoBreakFast");
+			openRecipeArrow[1].classList.remove("invertChevron");
+			open2 = !open2;
+
+		} // open 3rd recipe
+		 else if(e.target === openRecipeArrow[2] && !open3){
+			recipeMain[2].classList.add("showAvoTapas");
+			openRecipeArrow[2].classList.add("invertChevron");
+			open3 = !open3;
+			} else if(e.target === openRecipeArrow[2] && open3){
+			recipeMain[2].classList.remove("showAvoTapas");
+			openRecipeArrow[2].classList.remove("invertChevron");
+			open3 = !open3;
+
+		} // open 4th recipe
+		 else if(e.target === openRecipeArrow[3] && !open4){
+			recipeMain[3].classList.add("showAvoStrawb");
+			openRecipeArrow[3].classList.add("invertChevron");
+			open4 = !open4;
+			} else if(e.target === openRecipeArrow[3] && open4){
+			recipeMain[3].classList.remove("showAvoStrawb");
+			openRecipeArrow[3].classList.remove("invertChevron");
+			open4 = !open4;
 		}
 	}
 </script>
