@@ -10,31 +10,31 @@
 					<th>Gramos</th>
 				</tr>
 				<tr>
-					<td>32</td>
+					<td class="size1">32</td>
 					<td>+330</td>
 				</tr>
 				<tr>
-					<td>36</td>
+					<td class="size2">36</td>
 					<td>300-330</td>
 				</tr>
 				<tr>
-					<td>40</td>
+					<td class="size3">40</td>
 					<td>265-300</td>
 				</tr>
 				<tr>
-					<td>48</td>
+					<td class="size4">48</td>
 					<td>205-265</td>
 				</tr>
 				<tr>
-					<td>60</td>
+					<td class="size5">60</td>
 					<td>170-205</td>
 				</tr>
 				<tr>
-					<td>70</td>
+					<td class="size6">70</td>
 					<td>150-170</td>
 				</tr>
 				<tr>
-					<td>84</td>
+					<td class="size7">84</td>
 					<td>120-150</td>
 				</tr>
 			</table><br>
@@ -48,23 +48,23 @@
 				<th>Gramos</th>
 				</tr>
 				<tr>
-					<td>18</td>
+					<td class="size1">18</td>
 					<td>330-340</td>
 				</tr>
 				<tr>
-					<td>20</td>
+					<td class="size2">20</td>
 					<td>285-236</td>
 				</tr>
 				<tr>
-					<td>24</td>
+					<td class="size3">24</td>
 					<td>235-285</td>
 				</tr>
 				<tr>
-					<td>30</td>
+					<td class="size4">30</td>
 					<td>180-235</td>
 				</tr>
 				<tr>
-					<td>35</td>
+					<td class="size5">35</td>
 					<td>160-180</td>
 				</tr>
 			</table><br>
@@ -78,31 +78,31 @@
 					<th>Gramos</th>
 				</tr>
 				<tr>
-					<td>12</td>
+					<td class="size1">12</td>
 					<td>+330</td>
 				</tr>
 				<tr>
-					<td>14</td>
+					<td class="size2">14</td>
 					<td>300-330</td>
 				</tr>
 				<tr>
-					<td>16</td>
+					<td class="size3">16</td>
 					<td>265-300</td>
 				</tr>
 				<tr>
-					<td>18</td>
+					<td class="size4">18</td>
 					<td>205-265</td>
 				</tr>
 				<tr>
-					<td>22</td>
+					<td class="size5">22</td>
 					<td>170-205</td>
 				</tr>
 				<tr>
-					<td>24</td>
+					<td class="size6">24</td>
 					<td>150-170</td>
 				</tr>
 				<tr>
-					<td>26</td>
+					<td class="size7">26</td>
 					<td>120-150</td>
 				</tr>
 			</table><br>
@@ -116,23 +116,23 @@
 					<th>Gramos</th>
 				</tr>
 				<tr>
-					<td>S. Extra</td>
+					<td class="size1">S. Extra</td>
 					<td>+260</td>
 				</tr>
 				<tr>
-					<td>Extra</td>
+					<td class="size2">Extra</td>
 					<td>220-260</td>
 				</tr>
 				<tr>
-					<td>Primera</td>
+					<td class="size3">Primera</td>
 					<td>175-220</td>
 				</tr>
 				<tr>
-					<td>Mediano</td>
+					<td class="size4">Mediano</td>
 					<td>145-220</td>
 				</tr>
 				<tr>
-					<td>Tercera</td>
+					<td class="size5">Tercera</td>
 					<td>100-145</td>
 				</tr>
 			</table><br>
@@ -168,9 +168,7 @@
 		justify-content: start;
 		width: 80%;
 		height: 100px;
-/*		background-color: #FCFCFC;*/
 		overflow: hidden;
-/*		border: 1px solid;*/
 		border-radius: 5px;
 		color: #FCFCFC;
 		transition: 1s;
@@ -182,7 +180,7 @@
 	}
 
 	.showTabUSA{
-		height: 320px;
+		height: 660px;
 	}
 
 	.showTabJap{
@@ -191,8 +189,10 @@
 
 	.sizesTb{
 		background-color: #FCFCFC;
-		border-radius: 5px;
 		width: 80%;
+		padding: 4% 0;
+		border-radius: 5px;
+
 	}
 
 	.showSizesTb{
@@ -207,6 +207,69 @@
 	.sizesTb tr td{
 		font-size: 1rem;
 		text-align: center;
+	}
+
+	.size1{
+		padding: 12% 0;
+		background-image: url("../../public/avocado.svg");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+
+	}
+
+	.size2{
+		padding: 11.5% 0;
+		background-image: url("../../public/avocado.svg");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+
+	}
+
+	.size3{
+		padding: 10.5% 0;
+		background-image: url("../../public/avocado.svg");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+
+	}
+
+	.size4{
+		padding: 9.5% 0;
+		background-image: url("../../public/avocado.svg");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+
+	}
+
+	.size5{
+		padding: 8.5% 0;
+		background-image: url("../../public/avocado.svg");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+
+	}
+
+	.size6{
+		padding: 7.5% 0;
+		background-image: url("../../public/avocado.svg");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+
+	}
+
+	.size7{
+		padding: 6.5% 0;
+		background-image: url("../../public/avocado.svg");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+
 	}
 
 
