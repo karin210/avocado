@@ -167,16 +167,16 @@
 		padding-bottom: 5%;
 		border: 2px solid #afafaf;
 		border-radius: 5px;
-
 	}
 
 	.recipe-main{
 		height: 0;
 		overflow: hidden;
+		transition: 1s;
 	}
 
 	.showGuacamole{
-		height: 765px;
+		height: 450px;
 	}
 
 	.showAvoBreakFast{
@@ -237,5 +237,33 @@
 
 	.recipe i{
 		align-self: center;
+		transition: 1s;
+	}
+
+	.invertChevron{
+		transform: rotate(180deg);
 	}
 </style>
+
+
+<script>
+	const openRecipeArrow = document.querySelectorAll(".fa-chevron-down");
+	const recipeMain = document.querySelectorAll(".recipe-main");
+
+	let open1 = false;
+	for(let i = 0; i < openRecipeArrow.length; i++){
+		openRecipeArrow[i].addEventListener("touchstart", openRecipe);
+	}
+	
+	function openRecipe(e){
+		if(e.target === openRecipeArrow[0] && !open1){
+			recipeMain[0].classList.add("showGuacamole");
+			openRecipeArrow[0].classList.add("invertChevron");
+			open1 = !open1;
+		} else if(e.target === openRecipeArrow[0] && open1){
+			recipeMain[0].classList.remove("showGuacamole");
+			openRecipeArrow[0].classList.remove("invertChevron");
+			open1 = !open1;
+		}
+	}
+</script>
