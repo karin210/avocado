@@ -2,18 +2,23 @@
 	<h2>Certificaciones</h2>
 	<picture id="cert-pics">
 		<figure>
-			<img alt="primusGFS logo" src="https://primusgfs.com/wp-content/uploads/2019/07/pgfs-who-logo.jpg" />
+			<img class="cert-img" alt="primusGFS logo" src="https://primusgfs.com/wp-content/uploads/2019/07/pgfs-who-logo.jpg" />
 		</figure>
 		<figure>
-			<img alt="GlobalGAP logo" src="https://seeklogo.com/images/G/global-g-a-p-logo-7AE0F2947E-seeklogo.com.png" />
+			<img class="cert-img" alt="GlobalGAP logo" src="https://seeklogo.com/images/G/global-g-a-p-logo-7AE0F2947E-seeklogo.com.png" />
 		</figure>
 		<figure>
-			<img alt="GlobalGAP logo" src="https://nationalzoo.si.edu/sites/default/files/smb_logo_transparent.png" />
+			<img class="cert-img" alt="GlobalGAP logo" src="https://nationalzoo.si.edu/sites/default/files/smb_logo_transparent.png" />
 		</figure>
 	</picture>
 </article>
 <style type="text/css">
 	
+
+	#certifications{
+		margin-bottom: 5%;
+	}
+
 	#certifications h2{
 		text-align: center;
 	}
@@ -22,14 +27,17 @@
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: center;
+
 	}
 
-	#cert-pics figure{
-		width: 25%;
-		max-width: 300px;
+	.cert-img{
+		height: 100px;
 	}
 
-	#cert-pics figure img {
-		width: 100%;
+	/*laptop up*/
+	@media (min-width: 1024px) and (orientation: landscape){
+		.cert-img{
+			height: 150px;
+		}
 	}
 </style>
