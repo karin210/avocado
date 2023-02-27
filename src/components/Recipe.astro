@@ -197,7 +197,7 @@
 	}
 
 	.recipe h2{
-		font-size: 1.2rem;
+		font-size: clamp(1.2rem, 1.4vw, 1.6rem);
 		padding: 0 4%;
 		text-align: center;
 	}
@@ -214,6 +214,7 @@
 
 	.recipe-insights{
 		display: flex;
+		justify-content: center;
 		gap: 10%;
 		margin: 4% 0;
 		margin-left: 10px;
@@ -246,7 +247,28 @@
 
 	/*laptop up*/
 	@media (min-width: 1024px) and (orientation: landscape){
-		
+
+		.recipe{
+			width: 35%;
+		}
+
+		.recipe-img{
+			height: 450px;
+		}
+
+		.recipe-details img{
+			width: 40px;
+		}
+
+		.recipe-insights{
+			font-size: 1.2rem;
+			align-items: center;
+		}
+
+		.servings{
+			display: flex;
+			align-items: center;
+		}
 	}
 </style>
 
@@ -260,7 +282,7 @@
 	let open3 = false;
 	let open4 = false;
 	for(let i = 0; i < openRecipeArrow.length; i++){
-		openRecipeArrow[i].addEventListener("touchstart", openRecipe);
+		openRecipeArrow[i].addEventListener("click", openRecipe);
 	}
 	
 	function openRecipe(e){
