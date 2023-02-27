@@ -227,7 +227,7 @@
 	}
 
 	.ingredients-span, .steps-span{
-		font-size: clamp(1rem, 1.4vw, 1.3rem);
+		font-size: clamp(1rem, 1.4vw, 1.4rem);
 		font-weight: bold;
 		text-align: center;
 		margin-left: 4%;
@@ -237,6 +237,11 @@
 	.steps-list, .ingredients-list{
 		padding: 0 12%;
 		line-height: 133%;
+		font-size: clamp(1rem, 1.4vw, 1.4rem);
+	}
+
+	.ingredients-list{
+		margin-left: 10%;
 	}
 
 	.steps-list{
@@ -258,7 +263,25 @@
 
 		.recipe{
 			width: 35%;
+			height: 630px;
 			padding-bottom: 3%;
+			transition: 1s	;
+		}
+
+		.showRecipe1{
+			height: 120vh;
+		}
+
+		.showRecipe2{
+			height: 145vh;
+		}
+
+		.showRecipe3{
+			height: 140vh;
+		}
+
+		.showRecipe4{
+			height: 150vh;
 		}
 
 		.recipe-img{
@@ -279,10 +302,30 @@
 			align-items: center;
 		}
 
+
+		.steps-list, .ingredients-list{
+			margin: 0 auto;
+		}
+
+		.ingredients-list{
+		margin-left: 17%;
+		}
+
+		.recipe-main{
+			gap: 4%;
+		}
+
 		.recipe i{
 			font-size: 1.7rem;
 			cursor: pointer;
 		}
+
+		.showGuacamole{
+		height: 500px;
+	}
+
+
+
 	}
 </style>
 
@@ -290,6 +333,8 @@
 <script>
 	const openRecipeArrow = document.querySelectorAll(".fa-chevron-down");
 	const recipeMain = document.querySelectorAll(".recipe-main");
+
+	const recipeBox = document.querySelectorAll(".recipe");
 
 	let open1 = false;
 	let open2 = false;
@@ -304,40 +349,48 @@
 		if(e.target === openRecipeArrow[0] && !open1){
 			recipeMain[0].classList.add("showGuacamole");
 			openRecipeArrow[0].classList.add("invertChevron");
+			recipeBox[0].classList.add("showRecipe1");
 			open1 = !open1;
 		} else if(e.target === openRecipeArrow[0] && open1){
 			recipeMain[0].classList.remove("showGuacamole");
 			openRecipeArrow[0].classList.remove("invertChevron");
+			recipeBox[0].classList.remove("showRecipe1");
 			open1 = !open1;
 
 			// open 2nd recipe
 		} else if(e.target === openRecipeArrow[1] && !open2){
 			recipeMain[1].classList.add("showAvoBreakFast");
 			openRecipeArrow[1].classList.add("invertChevron");
+			recipeBox[1].classList.add("showRecipe2");
 			open2 = !open2;
 			} else if(e.target === openRecipeArrow[1] && open2){
 			recipeMain[1].classList.remove("showAvoBreakFast");
 			openRecipeArrow[1].classList.remove("invertChevron");
+			recipeBox[1].classList.remove("showRecipe2");
 			open2 = !open2;
 
 		} // open 3rd recipe
 		 else if(e.target === openRecipeArrow[2] && !open3){
 			recipeMain[2].classList.add("showAvoTapas");
 			openRecipeArrow[2].classList.add("invertChevron");
+			recipeBox[2].classList.add("showRecipe3");
 			open3 = !open3;
 			} else if(e.target === openRecipeArrow[2] && open3){
 			recipeMain[2].classList.remove("showAvoTapas");
 			openRecipeArrow[2].classList.remove("invertChevron");
+			recipeBox[2].classList.remove("showRecipe3");
 			open3 = !open3;
 
 		} // open 4th recipe
 		 else if(e.target === openRecipeArrow[3] && !open4){
 			recipeMain[3].classList.add("showAvoStrawb");
 			openRecipeArrow[3].classList.add("invertChevron");
+			recipeBox[3].classList.add("showRecipe4");
 			open4 = !open4;
 			} else if(e.target === openRecipeArrow[3] && open4){
 			recipeMain[3].classList.remove("showAvoStrawb");
 			openRecipeArrow[3].classList.remove("invertChevron");
+			recipeBox[3].classList.remove("showRecipe4");
 			open4 = !open4;
 		}
 	}
