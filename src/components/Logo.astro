@@ -1,7 +1,7 @@
 ---
 const { idFig, classFig, idImg, classImg } = Astro.props;
 ---
-<a href="/index/">
+<a id="logo-a" href="/">
 	<figure id={idFig} class={classFig}>
 		<img id={idImg} class={classImg} src="https://avocado.com.au/wp-content/uploads/2020/10/avocado-logo-yoast-seo-1.png">
 	</figure>
@@ -9,12 +9,20 @@ const { idFig, classFig, idImg, classImg } = Astro.props;
 
 <style type="text/css">
 
+	#logo-a{
+		display: none;
+	}
+
 	.logo-img{
 		display: none;
 	}
 
 /*laptop up*/
 	@media (min-width: 1024px) and (orientation: landscape) {
+
+		#logo-a{
+		display: initial;
+	}
 
 		.logo-box{
 			display: inline;
