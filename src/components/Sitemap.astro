@@ -2,31 +2,49 @@
 ---
 
 <h3>Mapa del sitio</h3>
-<ul id="siteList">
+<ul id="siteList" class="siteMap-ul">
 	<li><a href="/index/">Home</a></li>
-	<ul><br>
-		<li><a href="/nosotros/">Nosotros</a></li>
-		<ul><br>
+	<i class="fa-regular fa-turn-down-right"></i>
+	<ul class="siteMap-ul"><br>
+		<li class="father-list"><a href="/nosotros/">Nosotros</a></li>
+		<ul class="siteMap-ul child-list"><br>
+			<!-- <img alt="turn down right icon" src="https://www.svgrepo.com/show/491339/arrow-turn-down-right.svg" /> -->
 			<li><a>Sobre nosotros</a></li><br>
 			<li><a>Galería<a/></li><br>
 			<li><a>Certificaciónes</a></li><br>
 			<li><a href="#clientes">Clientes</a></li><br>
 			<li><a>Contáctanos</a></li><br>
 		</ul>
-		<li><a>Producto</a></li>
-		<ul><br>
+		<li class="father-list"><a>Producto</a></li>
+		<ul class="siteMap-ul child-list"><br>
 			<li><a>Beneficios del aguacate</a></li><br>
 			<li><a>Calibres</a></li><br>
 		</ul>
-		<li><a href="/articulos/">Artículos</a></li>
-		<ul><br>
+		<li class="father-list"><a href="/articulos/">Artículos</a></li>
+		<ul class="siteMap-ul"><br>
 			<li><a>Recetas</a></li>
 		</ul>
 	</ul>
 </ul>
 
 <style type="text/css">
-	#siteList{
-/*		line-height: 20px;*/
+
+	/*laptop up*/
+	@media (min-width: 1024px) and (orientation: landscape){ 
+
+		ul img{
+			width: 1.5%;
+		}
+
+		.father-list{
+			margin: 15px 0;
+		}
+
+		.child-list{
+			display: flex;
+			gap: 3%;
+			margin-right: 60%;
+		}
+
 	}
 </style>
