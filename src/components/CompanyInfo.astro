@@ -3,17 +3,33 @@
 <a name="about us"></a>
 <article id="brandInfo-box">
 	<section class="topic">
-		<p class="bigTxt">Misión</p>
+		<h3 id="description-h" class="topic-h">Descripción</h3>
+		<p class="weTxtHidden">Centro de acopio y exportación de aguacate Hass</p>
+		<i class="fa-solid fa-circle-chevron-down"></i>
+	</section>
+	<section class="topic">
+		<h3 class="topic-h">Misión</h3>
 		<p id="missionP" class="weTxtHidden">Enviar los aguacates de mejor calidad garantizando los estándares más altos de BPA (Buenas prácticas Agrícolas) y BPM (Buenas Prácticas de Manufactura)</p>
 		<i class="fa-solid fa-circle-chevron-down"></i>
 	</section>
 	<section class="topic">
-		<p class="bigTxt">Visión</p>
+		<h3 class="topic-h">Visión</h3>
 		<p id="visionP" class="weTxtHidden">Ser el principal proveedor de aguacate del mundo</p>
 		<i class="fa-solid fa-circle-chevron-down"></i>
 	</section>
 	<section class="topic">
-		<p class="bigTxt">Historia</p>
+		<h3 class="topic-h">Valores</h3>
+		<ul class="weTxtHidden">
+			<li>Pasión</li>
+			<li>Compromiso</li>
+			<li>Responsabilidad</li>
+			<li>Disciplina</li>
+			<li>Tolerancia</li>
+		</ul>
+		<i class="fa-solid fa-circle-chevron-down"></i>
+	</section>
+	<section class="topic">
+		<h3 class="topic-h">Historia</h3>
 		<p id="storyP" class="weTxtHidden">Además, a partir de mayo de 2015, Corporativo La Viña estableció un centro de dAdemás, a partir de mayo de 2015, Corporativo La Viña estableció un centro de distribución en San Salvador Huixcolotla, Puebla, beneficiando la logística de sus clientes del centro y sureste de México, con instalaciones de primer nivel ofertando diferentes productos. demás, a partir de mayo de 2015, Corporativo La Viña estableció un centro de distribución en San Salvador Huixcolotla, Puebla, beneficiando la logística de sus clientes del centro y sureste de México, con instalaciones de primer nivel ofertando diferentes productos.</p>
 		<i class="fa-solid fa-circle-chevron-down"></i>
 	</section>
@@ -25,7 +41,7 @@
 
 	#brandInfo-box{
 		display: flex;
-		flex-direction: column;
+		flex-flow: row wrap;
 		justify-content: center;
 		gap: 0.5px 0;
 	}
@@ -36,26 +52,49 @@
 		justify-content: center;
 		align-items: center;
 		padding-bottom: 5px;
-		background-color: #0D0D0D;
+		background-color: #FCFCFC;
 	}
 
-	.topic p{
-		color: #FCFCFC;
+	.topic:nth-of-type(1){
+
+		border-bottom: 1px solid;
 	}
 
-	.bigTxt{
-		font-size: clamp(1.7rem, 2vw, 2rem);
+	.topic:nth-of-type(2){
+		font-size: clamp(1.1rem, 1.9vw, 2rem);
+		width: 49%;
+		border-right: 1px solid;
+	}
+
+	.topic:nth-of-type(3){
+		width: 50%;
+		font-size: clamp(1.2rem, 2vw, 2rem);
+	}
+
+	.topic:nth-of-type(4){
+		width: 100%;
+		border-top: 1px solid;
+		border-bottom: 1px solid;
+	}
+
+	.topic-h{
+		font-size: clamp(1rem, 2vw, 2rem);
 		font-weight: bold;
-		align-self: start;
-		margin-left: 10%;
+		color: #FCFCFC;
+		align-self: center;
+
+	}
+
+	#description-h{
+		font-size: clamp(1.2rem, 2vw, 2rem);
 	}
 
 	.weTxtHidden{
 		display: block;
 		background-color: rgba(143,241,101,90%);
 		font-size: clamp(1rem, 1.5vw, 1.3rem);
-		margin: 0 5%;
-		border-radius: 7px;
+		margin: 1% 0;
+/*		border-radius: 7px;*/
 		text-align: center;
 		height: 0;
 		overflow: hidden;
@@ -67,7 +106,7 @@
 
 	}
 	.weTxtShow-mission{
-		height: 78px;
+		height: 170px;
 	}
 
 	.weTxtShow-vision{
@@ -80,7 +119,7 @@
 	}
 
 	article i {
-		font-size: 2rem;
+		font-size: 1.3rem;
 		color: #8FF165;
 		transition: 1s;
 	}
