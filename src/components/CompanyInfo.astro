@@ -9,7 +9,7 @@
 	</section>
 	<section class="topic description">
 		<i class="fa-sharp fa-solid fa-eye"></i>
-		<h3 id="description-h" class="topic-h">Descripción</h3>
+		<h3 class="topic-h description-h">Descripción</h3>
 		<figure id="description-fig" class="topic-fig">
 			<img alt="avocados image" src="../../public/vecteezy_avocado-fruit-healthy-food_12629188_575.png" />
 		</figure>
@@ -140,7 +140,7 @@
 		left: 22%;
 	}
 
-	#description-h{
+	.description-h{
 		width: 39%;
 		overflow: hidden;
 		font-size: clamp(1.3rem, 2vw, 2rem);
@@ -172,6 +172,7 @@
 	}
 
 	.story i{
+		font-size: 0.9rem;
 		position: relative;
 		top: 10%;
 	}
@@ -215,6 +216,7 @@
 		display: none;
 	}
 
+
 	.topicInfo-box h3{
 		text-align: center;
 		color: #666666
@@ -230,6 +232,16 @@
 	.descriptionInfo-box{
 		width: 100%;
 		background-color: #f0f0f0;
+	}
+
+	.showTopicH{
+		animation-name: showInfoH3;
+		animation-duration: 0.9s;
+	}
+
+	.showTopicP{
+		animation-name: showInfoP;
+		animation-duration: 0.9s;	
 	}
 
 	.descriptionInfo-box h3{
@@ -259,7 +271,16 @@
 		font-size: 0.65rem;
 	}
 
+@keyframes showInfoH3{
+	from{margin-top: 18%;
+			color: transparent;}
+	to{}
+}
 
+@keyframes showInfoP{
+	from{color: transparent;}
+	to{}
+}
 
 	/*laptop up*/
 	@media (min-width: 1024px) and (orientation: landscape) {
@@ -276,16 +297,41 @@
 		.topic i{
 			display: none;
 		}
-
-		.weTxtHidden{
-			background-color: rgba(240, 240, 240, 90%);
-			height: auto;
-			padding: 5% 7%;
-			width: 75%;
-		}
 	}
 </style>
 
 <script type="text/javascript">
-	// const
+	const description = document.querySelector(".description"),
+	 descriptionH = document.querySelector(".description-h"),
+	 descripEye = document.querySelector(".description i"),
+	 descripFig = document.querySelector(".description figure"),
+	 descriptionInfo = document.querySelector(".descriptionInfo-box"),
+	 descriptionInfoH = document.querySelector(".descriptionInfo-box h3"),
+	 descriptionInfoP = document.querySelector(".descriptionInfo-txt");
+	
+	
+	description.addEventListener("touchstart", openDescrip);
+
+	let descripIsOpen = false;
+
+	function openDescrip(){
+		if(!descripIsOpen){
+			descriptionH.style.display = "none";
+			descripEye.style.display = "none";
+			descripFig.style.display = "none";
+			descriptionInfo.style.display = "block";
+			descriptionInfoH.classList.add("showTopicH");
+			descriptionInfoP.classList.add("showTopicP");
+
+			descripIsOpen = !descripIsOpen;
+		} else {
+			descriptionH.style.display = "inherit";
+			descripEye.style.display = "inherit";
+			descripFig.style.display = "inherit";
+			descriptionInfoH.classList.remove("showTopicH");
+			descriptionInfoP.classList.remove("showTopicP");
+			descripIsOpen = !descripIsOpen;
+		}
+	}
+
 </script>
