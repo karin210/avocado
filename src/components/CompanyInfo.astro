@@ -8,29 +8,28 @@
 		<i class="fa-solid fa-quote-right"></i>
 	</section>
 	<section class="topic description">
+		<div></div>
 		<h3 id="description-h" class="topic-h">Descripción</h3>
+		<figure id="desciption-fig">
+			<img alt="avocados image" src="../../public/vecteezy_avocado-fruit-healthy-food_12629188_575.png" />
+		</figure>
 		<p class="weTxtHidden">Centro de acopio y exportación de aguacate Hass</p>
 		<i class="fa-solid fa-circle-chevron-down"></i>
 	</section>
 	<section class="topic mission">
 		<h3 id="mission-h" class="topic-h">Misión</h3>
+		<figure id="mission-fig">
+			<img alt="black avocado image" src="../../public/avocado-black.png" />
+		</figure>
 		<p id="missionP" class="weTxtHidden">Enviar los aguacates de mejor calidad garantizando los estándares más altos de BPA (Buenas prácticas Agrícolas) y BPM (Buenas Prácticas de Manufactura)</p>
 		<i class="fa-solid fa-circle-chevron-down"></i>
 	</section>
 	<section class="topic vision">
 		<h3 id="vision-h" class="topic-h">Visión</h3>
+		<figure id="vision-fig">
+			<img alt="world image" src="https://pngimg.com/d/earth_PNG14.png" />
+		</figure>
 		<p id="visionP" class="weTxtHidden">Ser el principal proveedor de aguacate del mundo</p>
-		<i class="fa-solid fa-circle-chevron-down"></i>
-	</section>
-	<section class="topic values">
-		<h3 id="values-h" class="topic-h">Valores</h3>
-		<ul class="weTxtHidden">
-			<li>Pasión</li>
-			<li>Compromiso</li>
-			<li>Responsabilidad</li>
-			<li>Disciplina</li>
-			<li>Tolerancia</li>
-		</ul>
 		<i class="fa-solid fa-circle-chevron-down"></i>
 	</section>
 	<section class="topic story">
@@ -62,7 +61,7 @@
 
 	.slogan-box i{
 		font-size: 2rem;
-		color: rgba(143, 241, 101, 50%);
+		color: #f0f0f0;
 	}
 
 	.fa-quote-left{
@@ -85,7 +84,7 @@
 
 	.slogan-box::before{
 		content: "";
-		background-image: url("https://media.istockphoto.com/id/1299023802/photo/avocado-halves-with-trendy-hard-light-and-hard-shadow-on-yellow-background.jpg?b=1&s=170667a&w=0&k=20&c=5PFxm3Ue3zhbkud8Goa4ulzL9gTmD9SMywF3kA3q33g=	");
+		background-image: url("https://burst.shopifycdn.com/photos/two-avocado-slices.jpg?width=925&format=pjpg&exif=1&iptc=1");
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
@@ -107,31 +106,63 @@
 	}
 
 	.description{
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		justify-content: end;
+		background: linear-gradient(140deg, #f0f0f0 56%, #fcfcfc);
 		width: 100%;
 		height: 20vh;
 	}
 
-	.description::before{
-		content: "";
-		position: absolute;
-		top: 250px;
-		right: 0px;
-		background-image: url("../../public/vecteezy_avocado-fruit-healthy-food_12629188_575.png");
-		background-size: 100%;
-		background-repeat: no-repeat;
-		width: 136px;
-		height: 127px;
+	#desciption-fig{
+		width: 30%;
+		height: 100%;
+		margin: 0;
+		overflow: hidden;
+	}
+
+	#desciption-fig img{
+		width: 146%;
 	}
 
 	.mission{
+		justify-content: end;
 		width: 49%;
 		height: 16vh;
 		margin-right: 1px;
+		background: linear-gradient(180deg, #f0f0f0 56%, #fcfcfc);
 	}
 
+	#mission-fig{
+		width: 87%;
+		margin: 0;
+		height: 36.6%;
+		overflow: hidden;
+		margin-right: auto;
+	}
+
+	#mission-fig img{
+		width: 100%;
+	}
+
+
 	.vision{
+		justify-content: end;
 		width: 50%;
 		height: 16vh;
+		background: linear-gradient(180deg, #f0f0f0 56%, #fcfcfc);
+	}
+
+	#vision-fig{
+		width: 100%;
+		margin: 0;
+		height: 36.6%;
+		overflow: hidden;
+	}
+
+	#vision-fig img{
+		width: 100%;
 	}
 
 	.values{
@@ -144,12 +175,13 @@
 	}
 
 	.topic-h{
-		color: #0D0D0D;
+		color: #666666;
 		align-self: center;
+		margin: 0;
 	}
 
-	.description-h{
-		font-size: clamp(1.5rem, 2vw, 2rem)
+	#description-h{
+		font-size: clamp(1.6rem, 2vw, 2rem);
 	}
 
 	.weTxtHidden{
@@ -203,6 +235,7 @@
 
 		.slogan-box::before{
 			height: 33vh;
+			top: 108px;
 		}
 
 		.topic{
