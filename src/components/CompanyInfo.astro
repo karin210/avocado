@@ -23,8 +23,9 @@
 		<figure id="mission-fig" class="topic-fig">
 			<img alt="black avocado image" src="../../public/avocado-black.png" />
 		</figure>
-		<div>
-			<p id="missionP" class="weTxtHidden">Enviar los aguacates de mejor calidad garantizando los estándares más altos de BPA (Buenas prácticas Agrícolas) y BPM (Buenas Prácticas de Manufactura)</p>
+		<div class="topicInfo-box missionInfo-box">
+			<h3>Misión</h3>
+			<p class="missionInfo-txt">Enviar los aguacates de mejor calidad garantizando los estándares más altos de BPA (Buenas prácticas Agrícolas) y BPM (Buenas Prácticas de Manufactura)</p>
 		</div>
 	</section>
 	<section class="topic vision">
@@ -32,14 +33,16 @@
 		<figure id="vision-fig" class="topic-fig">
 			<img alt="world image" src="https://pngimg.com/d/earth_PNG14.png" />
 		</figure>
-		<div>
-			<p id="visionP" class="weTxtHidden">Ser el principal proveedor de aguacate del mundo</p>
+		<div class="topicInfo-box visionInfo-box">
+			<h3>Visión</h3>
+			<p class="visionInfo-txt">Ser el principal proveedor de aguacate del mundo</p>
 		</div>
 	</section>
 	<section class="topic story">
 		<h3 id="story-h" class="topic-h">Historia</h3>
-		<div>
-			<p id="storyP" class="weTxtHidden">Además, a partir de mayo de 2015, Corporativo La Viña estableció un centro de dAdemás, a partir de mayo de 2015, Corporativo La Viña estableció un centro de distribución en San Salvador Huixcolotla, Puebla, beneficiando la logística de sus clientes del centro y sureste de México, con instalaciones de primer nivel ofertando diferentes productos. demás, a partir de mayo de 2015, Corporativo La Viña estableció un centro de distribución en San Salvador Huixcolotla, Puebla, beneficiando la logística de sus clientes del centro y sureste de México, con instalaciones de primer nivel ofertando diferentes productos.</p>
+		<div class="topicInfo-box storyInfo-box">
+			<h3>Story</h3>
+			<p class="storyInfo-txt">Además, a partir de mayo de 2015, Corporativo La Viña estableció un centro de dAdemás, a partir de mayo de 2015, Corporativo La Viña estableció un centro de distribución en San Salvador Huixcolotla, Puebla, beneficiando la logística de sus clientes del centro y sureste de México, con instalaciones de primer nivel ofertando diferentes productos. demás, a partir de mayo de 2015, Corporativo La Viña estableció un centro de distribución en San Salvador Huixcolotla, Puebla, beneficiando la logística de sus clientes del centro y sureste de México, con instalaciones de primer nivel ofertando diferentes productos.</p>
 		</div>
 	</section>
 	
@@ -111,24 +114,9 @@
 	}
 
 	.topic-h{
-		display: none;
 		color: #666666;
 		align-self: center;
 		margin: 0;
-	}
-
-	.topic-fig{
-		display: none;
-	}
-
-	.topicInfo-box h3{
-		font-size: 1rem;
-		color: #666666
-	}
-
-	.topicInfo-box p{
-		font-size: 0.85rem;
-		color: #666666
 	}
 
 	.description{
@@ -138,16 +126,14 @@
 		justify-content: end;
 		background: linear-gradient(140deg, #f0f0f0 56%, #fcfcfc);
 		width: 100%;
-		height: 20vh;
+		height: 22vh;
 	}
 
 	#description-h{
-		display: none;
 		font-size: clamp(1.6rem, 2vw, 2rem);
 	}
 
 	#desciption-fig{
-		display: none;
 		width: 30%;
 		height: 100%;
 		margin: 0;
@@ -158,26 +144,15 @@
 		width: 146%;
 	}
 
-	.descriptionInfo-box{
-		width: 100%;
-		background-color: #f0f0f0;
-	}
-
-	.descriptionInfo-box h3{
-		font-size: 1rem;
-		text-align: center;
-	}
-
-	.descriptionInfo-box p{
-		text-align: center;
-	}
-
-	.mission{
-		justify-content: end;
+	.mission, .vision{
 		width: 49%;
-		height: 16vh;
+		height: 20vh;
 		margin-right: 1px;
 		background: linear-gradient(180deg, #f0f0f0 56%, #fcfcfc);
+	}
+
+	#mission-h, #vision-h{
+		margin-top: auto;
 	}
 
 	#mission-fig{
@@ -192,14 +167,6 @@
 		width: 100%;
 	}
 
-
-	.vision{
-		justify-content: end;
-		width: 50%;
-		height: 16vh;
-		background: linear-gradient(180deg, #f0f0f0 56%, #fcfcfc);
-	}
-
 	#vision-fig{
 		width: 100%;
 		margin: 0;
@@ -211,57 +178,61 @@
 		width: 100%;
 	}
 
-	.values{
-		width: 100%;
+	#story-h{
 		height: 14vh;
 	}
 
-	.story{
-		height: 12vh;
-	}
 
+/*topic clicked*/
 
-
-	.weTxtHidden{
-		display: block;
-		background-color: rgba(143,241,101,90%);
-		font-size: clamp(1rem, 1.5vw, 1.3rem);
-		margin: 1% 0;
-		text-align: center;
-		height: 0;
-		overflow: hidden;
-		transition: 1s;
-	}
-
-	.weTxtShow-mission, .weTxtShow-vision{
-		padding: 8% 3%;
-
-	}
-	.weTxtShow-mission{
-		height: 170px;
-	}
-
-	.weTxtShow-vision{
-		height: 40px;		
-	}
-
-	.weTxtShow-story{
-		height: 320px;
-		padding: 10% 3%;
-	}
-
-	.fa-circle-chevron-down{
+	.topicInfo-box{
 		display: none;
-		font-size: 1.3rem;
-		color: black;
-		transition: 1s;
 	}
 
-	.arrowUp{
-		transform: rotate(0.5turn);
-		color: unset;
-
+	.topicInfo-box h3{
+		text-align: center;
+		color: #666666
 	}
+
+	.topicInfo-box p{
+		padding: 0 8%;
+		text-align: center;
+		line-height: 120%;
+		color: #666666
+	}
+
+	.descriptionInfo-box{
+		width: 100%;
+		background-color: #f0f0f0;
+	}
+
+	.descriptionInfo-box h3{
+		font-size: 1.2rem;
+	}
+
+	.descriptionInfo-txt{
+		font-size: 0.9rem;
+		text-align: center;
+	}
+
+	.missionInfo-box h3, .visionInfo-box h3{
+		font-size: 1rem;
+		margin: 5% 0;
+	}
+
+	.missionInfo-txt, .visionInfo-txt{
+		font-size: 0.7rem;
+	}
+
+	.storyInfo-box h3{
+		font-size: 0.95rem;
+		margin: 2% 0;
+	}
+
+	.storyInfo-txt{
+		font-size: 0.65rem;
+	}
+
 
 
 	/*laptop up*/
@@ -290,58 +261,4 @@
 </style>
 
 <script type="text/javascript">
-	const arrowBtns = document.querySelectorAll(".fa-circle-chevron-down");
-	const descriptions = document.querySelectorAll(".weTxtHidden");
-	const last = document.querySelector(".storyP");
-
-	let openMission = false;
-	let openVision = false;
-	let openStory = false;
-
-	for(i = 0; i < arrowBtns.length; i++){
-		arrowBtns[i].addEventListener("touchstart", function (e) {
-			// open mission
-			if(!openMission && e.target === arrowBtns[0]){
-				descriptions[0].classList.add("weTxtShow-mission");
-				arrowBtns[0].classList.add("arrowUp");
-				openMission = !openMission;
-			}
-			 // close mission 
-			else if(openMission && e.target === arrowBtns[0]){
-				descriptions[0].classList.remove("weTxtShow-mission");
-				arrowBtns[0].classList.remove("arrowUp");
-				openMission = !openMission;
-			}
-
-
-			// open vision
-			else if(!openVision && e.target === arrowBtns[1]){
-				descriptions[1].classList.add("weTxtShow-vision");
-				arrowBtns[1].classList.add("arrowUp");
-				openVision = !openVision;
-			}
-			 // close vision 
-			else if(openVision && e.target === arrowBtns[1]){		descriptions[1].classList.remove("weTxtShow-vision");
-				arrowBtns[1].classList.remove("arrowUp");
-				openVision = !openVision;
-			}
-
-			// open story
-			else if(!openStory && e.target === arrowBtns[2]){
-				descriptions[2].classList.add("weTxtShow-story");
-				arrowBtns[2].classList.add("arrowUp");
-				openStory = !openStory;
-			}
-			 // close story 
-			else if(openStory && e.target === arrowBtns[2]){	
-				descriptions[2].classList.remove("weTxtShow-story");
-				arrowBtns[2].classList.remove("arrowUp");
-				openStory = !openStory;
-			}
-			
-		});
-	}
-	
-
-
 </script>
