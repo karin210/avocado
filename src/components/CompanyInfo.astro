@@ -8,6 +8,7 @@
 		<i class="fa-solid fa-quote-right"></i>
 	</section>
 	<section class="topic description">
+		<i class="fa-sharp fa-solid fa-eye"></i>
 		<h3 id="description-h" class="topic-h">Descripción</h3>
 		<figure id="desciption-fig" class="topic-fig">
 			<img alt="avocados image" src="../../public/vecteezy_avocado-fruit-healthy-food_12629188_575.png" />
@@ -115,7 +116,7 @@
 
 	.topic-h{
 		color: #666666;
-		align-self: center;
+		text-align: center;
 		margin: 0;
 	}
 
@@ -129,12 +130,20 @@
 		height: 22vh;
 	}
 
+	.description i{
+		position: relative;
+		top: 26%;
+		left: 22%;
+	}
+
 	#description-h{
+		width: 39%;
+		overflow: hidden;
 		font-size: clamp(1.6rem, 2vw, 2rem);
 	}
 
 	#desciption-fig{
-		width: 30%;
+		width: 28.5%;
 		height: 100%;
 		margin: 0;
 		overflow: hidden;
@@ -178,8 +187,9 @@
 		width: 100%;
 	}
 
-	#story-h{
-		height: 14vh;
+	.story{
+		width: 100%;
+		height: 12vh;
 	}
 
 
@@ -261,4 +271,5 @@
 </style>
 
 <script type="text/javascript">
+	// const
 </script>
