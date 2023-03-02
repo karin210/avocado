@@ -9,7 +9,7 @@
 	</section>
 	<section class="topic description">
 		<h3 id="description-h" class="topic-h">Descripción</h3>
-		<figure id="desciption-fig">
+		<figure id="desciption-fig" class="topic-fig">
 			<img alt="avocados image" src="../../public/vecteezy_avocado-fruit-healthy-food_12629188_575.png" />
 		</figure>
 		<div class="topicInfo-box descriptionInfo-box">
@@ -20,7 +20,7 @@
 	</section>
 	<section class="topic mission">
 		<h3 id="mission-h" class="topic-h">Misión</h3>
-		<figure id="mission-fig">
+		<figure id="mission-fig" class="topic-fig">
 			<img alt="black avocado image" src="../../public/avocado-black.png" />
 		</figure>
 		<div>
@@ -29,7 +29,7 @@
 	</section>
 	<section class="topic vision">
 		<h3 id="vision-h" class="topic-h">Visión</h3>
-		<figure id="vision-fig">
+		<figure id="vision-fig" class="topic-fig">
 			<img alt="world image" src="https://pngimg.com/d/earth_PNG14.png" />
 		</figure>
 		<div>
@@ -108,6 +108,17 @@
 		justify-content: center;
 		align-items: center;
 		background-color: #f0f0f0;
+	}
+
+	.topic-h{
+		display: none;
+		color: #666666;
+		align-self: center;
+		margin: 0;
+	}
+
+	.topic-fig{
+		display: none;
 	}
 
 	.topicInfo-box h3{
@@ -209,11 +220,6 @@
 		height: 12vh;
 	}
 
-	.topic-h{
-		color: #666666;
-		align-self: center;
-		margin: 0;
-	}
 
 
 	.weTxtHidden{
