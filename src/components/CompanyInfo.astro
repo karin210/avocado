@@ -15,7 +15,7 @@
 		</figure>
 		<div class="topicInfo-box descriptionInfo-box">
 			<h3>Descripción</h3>
-			<p class="descriptionInfo-txt">Centro de acopio y exportación de aguacate Hass</p>
+			<p class="descriptionInfo-txt">Centro de acopio y exportación de aguacate Hass.</p>
 		</div>
 		
 	</section>
@@ -27,7 +27,7 @@
 		</figure>
 		<div class="topicInfo-box missionInfo-box">
 			<h3>Misión</h3>
-			<p class="missionInfo-txt">Enviar los aguacates de mejor calidad garantizando los estándares más altos de BPA (Buenas prácticas Agrícolas) y BPM (Buenas Prácticas de Manufactura)</p>
+			<p class="missionInfo-txt">Enviar los aguacates de mejor calidad garantizando los estándares más altos de BPA (Buenas prácticas Agrícolas) y BPM (Buenas Prácticas de Manufactura).</p>
 		</div>
 	</section>
 	<section class="topic vision">
@@ -38,7 +38,7 @@
 		</figure>
 		<div class="topicInfo-box visionInfo-box">
 			<h3>Visión</h3>
-			<p class="visionInfo-txt">Ser el principal proveedor de aguacate del mundo</p>
+			<p class="visionInfo-txt">Ser el principal proveedor de aguacate del mundo.</p>
 		</div>
 	</section>
 	<section class="topic story">
@@ -301,6 +301,8 @@
 </style>
 
 <script type="text/javascript">
+
+	// show description
 	const description = document.querySelector(".description"),
 	 descriptionH = document.querySelector(".description-h"),
 	 descripEye = document.querySelector(".description i"),
@@ -325,13 +327,117 @@
 
 			descripIsOpen = !descripIsOpen;
 		} else {
-			descriptionH.style.display = "inherit";
-			descripEye.style.display = "inherit";
-			descripFig.style.display = "inherit";
+			descriptionH.style.display = "block";
+			descripEye.style.display = "block";
+			descripFig.style.display = "block";
+			descriptionInfo.style.display = "none";
 			descriptionInfoH.classList.remove("showTopicH");
 			descriptionInfoP.classList.remove("showTopicP");
 			descripIsOpen = !descripIsOpen;
 		}
 	}
+
+
+// show mission
+	const mission = document.querySelector(".mission"),
+  missionH = document.querySelector(".mission h3"),
+  missionEye = document.querySelector(".mission i"),
+  missionFig = document.querySelector(".mission figure"),
+  missionInfo = document.querySelector(".missionInfo-box"),
+  missionInfoH = document.querySelector(".missionInfo-box h3"),
+  missionInfoP = document.querySelector(".missionInfo-box p");
+
+mission.addEventListener("touchstart", openMission);
+
+  let missionIsOpen = false;
+
+function openMission(){
+		if(!missionIsOpen){
+			missionH.style.display = "none";
+			missionEye.style.display = "none";
+			missionFig.style.display = "none";
+			missionInfo.style.display = "block";
+			missionInfoH.classList.add("showTopicH");
+			missionInfoP.classList.add("showTopicP");
+
+			missionIsOpen = !missionIsOpen;
+		} else {
+			missionH.style.display = "block";
+			missionEye.style.display = "block";
+			missionFig.style.display = "block";
+			missionInfo.style.display = "none";
+			missionInfoH.classList.remove("showTopicH");
+			missionInfoP.classList.remove("showTopicP");
+			missionIsOpen = !missionIsOpen;
+		}
+	}
+
+// show vision
+	const vision = document.querySelector(".vision"),
+  visionH = document.querySelector(".vision h3"),
+  visionEye = document.querySelector(".vision i"),
+  visionFig = document.querySelector(".vision figure"),
+  visionInfo = document.querySelector(".visionInfo-box"),
+  visionInfoH = document.querySelector(".visionInfo-box h3"),
+  visionInfoP = document.querySelector(".visionInfo-box p");
+
+vision.addEventListener("touchstart", openvision);
+
+  let visionIsOpen = false;
+
+function openvision(){
+		if(!visionIsOpen){
+			visionH.style.display = "none";
+			visionEye.style.display = "none";
+			visionFig.style.display = "none";
+			visionInfo.style.display = "block";
+			visionInfoH.classList.add("showTopicH");
+			visionInfoP.classList.add("showTopicP");
+
+			visionIsOpen = !visionIsOpen;
+		} else {
+			visionH.style.display = "block";
+			visionEye.style.display = "block";
+			visionFig.style.display = "block";
+			visionInfo.style.display = "none";
+			visionInfoH.classList.remove("showTopicH");
+			visionInfoP.classList.remove("showTopicP");
+			visionIsOpen = !visionIsOpen;
+		}
+	}
+
+// show story
+	const story = document.querySelector(".story"),
+  storyH = document.querySelector(".story h3"),
+  storyEye = document.querySelector(".story i"),
+  storyInfo = document.querySelector(".storyInfo-box"),
+  storyInfoH = document.querySelector(".storyInfo-box h3"),
+  storyInfoP = document.querySelector(".storyInfo-box p");
+
+story.addEventListener("touchstart", openstory);
+
+  let storyIsOpen = false;
+
+function openstory(){
+		if(!storyIsOpen){
+			story.style.height = "25vh";
+			storyH.style.display = "none";
+			storyEye.style.display = "none";
+			storyInfo.style.display = "block";
+			storyInfoH.classList.add("showTopicH");
+			storyInfoP.classList.add("showTopicP");
+
+			storyIsOpen = !storyIsOpen;
+		} else {
+			story.style.height = "12vh";
+			storyH.style.display = "block";
+			storyEye.style.display = "block";
+			storyInfo.style.display = "none";
+			storyInfoH.classList.remove("showTopicH");
+			storyInfoP.classList.remove("showTopicP");
+			storyIsOpen = !storyIsOpen;
+		}
+	}
+
 
 </script>
