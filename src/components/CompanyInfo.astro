@@ -44,7 +44,7 @@
 		<h3 id="story-h" class="topic-h">Historia</h3>
 		<i class="fa-sharp fa-solid fa-eye"></i>
 		<div class="topicInfo-box storyInfo-box">
-			<h3>Story</h3>
+			<h3>Historia</h3>
 			<p class="storyInfo-txt">
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -303,9 +303,24 @@
 			font-size: 3rem;
 		}
 
+		.fa-quote-left{
+		align-self: start;
+		margin-left: 32%
+	}
+
+	.fa-quote-right{
+		align-self: end;
+		margin-right: 32%;
+	}
+
 		.slogan-txt{
 			font-size: 2.3rem;
 		}
+
+		.topic i{
+			display: none;
+		}
+
 
 		.topic h3{
 			display: none;
@@ -348,27 +363,37 @@
 			font-size: 1.6rem;
 		}
 
-		.mission{
+		.mission, .vision{
+			display: grid;
+			grid-template: 1fr 1fr / 10% 80% 10% ;
 			height: 37vh;
 		}
 
-		.vision{
-			height: 37vh;
+		#mission-fig, #vision-fig{
+			grid-area: 2 / 2;
+			height: 100%;
 		}
 
-		.topic i{
-			display: none;
+		.missionInfo-box h3, .visionInfo-box h3{
+			font-size: 1.5rem;
 		}
 
-		.fa-quote-left{
-		align-self: start;
-		margin-left: 32%
-	}
+		.missionInfo-txt, .visionInfo-txt{
+			font-size: 1.2rem;
+		}
 
-	.fa-quote-right{
-		align-self: end;
-		margin-right: 32%;
-	}
+		.story{
+			height: 20vh;
+		}
+
+		.storyInfo-box h3{
+			font-size: 1.3rem;
+		}
+
+		.storyInfo-txt{
+			font-size: 1.2rem;
+		}
+
 
 	}
 </style>
