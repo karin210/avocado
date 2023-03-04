@@ -8,11 +8,11 @@
 		<i class="fa-solid fa-quote-right"></i>
 	</section>
 	<section class="topic description">
-		<i class="fa-sharp fa-solid fa-eye"></i>
 		<h3 class="topic-h description-h">Descripción</h3>
 		<figure id="description-fig" class="topic-fig">
 			<img alt="avocados image" src="../../public/vecteezy_avocado-fruit-healthy-food_12629188_575.png" />
 		</figure>
+		<i class="fa-sharp fa-solid fa-eye"></i>
 		<div class="topicInfo-box descriptionInfo-box">
 			<h3>Descripción</h3>
 			<p class="descriptionInfo-txt">Centro de acopio y exportación de aguacate Hass.</p>
@@ -130,10 +130,8 @@
 	}
 
 	.description{
-		display: flex;
-		flex-flow: row wrap;
-		align-items: center;
-		justify-content: end;
+		display: grid;
+		grid-template: 1fr 1fr/ 20% 60% 20%;
 		background: linear-gradient(140deg, #f0f0f0 56%, #fcfcfc);
 		width: 100%;
 		height: 22vh;
@@ -308,8 +306,36 @@
 			font-size: 2.3rem;
 		}
 
+		.topicInfo-box h3{
+			display: none;
+		}
+
 		.description{
 			height: 40vh;
+		}
+
+		#description-fig{
+			position: absolute;
+			top: 44%;
+			height: 40.5vh;
+			overflow: hidden;
+		}
+
+		#description-fig img{
+			width: 102%;
+		}
+
+		.description-h{
+			width: 100%;
+		}
+
+		.descriptionInfo-box{
+			display: block;
+			margin-bottom: auto;
+		}
+
+		.descriptionInfo-txt{
+			font-size: 1.6rem;
 		}
 
 		.mission{
