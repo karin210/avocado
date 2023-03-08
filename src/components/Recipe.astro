@@ -1,3 +1,7 @@
+---
+import groupIcon from "../../public/group.svg"
+---
+
 <section id="recipes">
 	<article class="recipe guacamole">
 		<img src="https://www.giallozafferano.com/images/255-25549/Guacamole_1200x800.jpg" class="recipe-img" />
@@ -5,7 +9,7 @@
 		<div class="recipe-details">
 			<div class="recipe-insights">
 				<div class="servings">
-					<img src="../../public/group.svg" alt="people" class="groupIcon" />
+					<img src={groupIcon} alt="people" class="groupIcon" />
 					<span>4</span>	
 				</div>
 				<div class="recipe-time">
@@ -41,7 +45,7 @@
 		<div class="recipe-details">
 			<div class="recipe-insights">
 				<div class="servings">
-					<img src="../../public/group.svg" alt="people" class="groupIcon"/>
+					<img src={groupIcon} alt="people" class="groupIcon"/>
 					<span>2</span>	
 				</div>
 				<div class="recipe-time">
@@ -79,7 +83,7 @@
 		<div class="recipe-details">
 			<div class="recipe-insights">
 				<div class="servings">
-					<img src="../../public/group.svg" alt="people" class="groupIcon"/>
+					<img src={groupIcon} alt="people" class="groupIcon"/>
 					<span>4</span>	
 				</div>
 				<div class="recipe-time">
@@ -114,7 +118,7 @@
 		<div class="recipe-details">
 			<div class="recipe-insights">
 				<div class="servings">
-					<img src="../../public/group.svg" alt="people" class="groupIcon"/>
+					<img src={groupIcon} alt="people" class="groupIcon"/>
 					<span>2</span>	
 				</div>
 				<div class="recipe-time">
@@ -268,12 +272,16 @@
 			transition: 1s	;
 		}
 
+		.showAvoBreakFast{
+		height: 830px;
+	}
+
 		.showRecipe1{
 			height: 120vh;
 		}
 
 		.showRecipe2{
-			height: 145vh;
+			height: 152vh;
 		}
 
 		.showRecipe3{
