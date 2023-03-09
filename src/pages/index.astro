@@ -11,7 +11,9 @@ import Footer from "../components/Footer.astro"
 	<main id="home-main-content">
 		<Header />
 		<img class="headTxt-box"/>
-		<p class="headTxt">Aguacate Hass de México</p>
+		<p class="headTxt">
+			<span>Aguacate Hass de México</span>
+		</p>
 	</main>
 	<Footer />
 </MyLayout>
@@ -38,6 +40,8 @@ import Footer from "../components/Footer.astro"
 		top: 0;
 		bottom: 0;
 		left: 0;
+		display: flex;
+		align-items: center;
 		margin: auto 0;
 		font-size: clamp(3rem, 3.8vw, 3.8rem);
 		font-weight: bold;
@@ -47,7 +51,7 @@ import Footer from "../components/Footer.astro"
 		padding-right: 5%;
 		width: 50%;
 		max-width: 290px;
-		height: 30%;
+		height: 22%;
 	}
 
 
@@ -61,7 +65,9 @@ import Footer from "../components/Footer.astro"
 	@media (min-width: 1024px) and (orientation: landscape) {
 
 		.headTxt{
-			margin-left: 9%;
+			padding-left: 9%;
+			padding-right: 3%;
+			height: 26%;
 		}
 		
 	}
