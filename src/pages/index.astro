@@ -10,36 +10,26 @@ import Footer from "../components/Footer.astro"
 <MyLayout>
 	<main id="home-main-content">
 		<Header />
-		<img class="headTxt-box"/>
-		<p class="headTxt">
+		<p class="homeTxt">
 			<span>Aguacate Hass de México</span>
 		</p>
+		<figure>
+			<img src="public/vecteezy_half-an-avocado-on-a-transparent-background_9337421_820.png" />
+		</figure>
 	</main>
 	<Footer />
 </MyLayout>
 
 <style type="text/css">
 
-	.headTxt-box{
-		filter: brightness(0.93);
-		height: 95vh;
-		width: 100%;
+	#home-main-content{
 		display: flex;
-		align-items: center;
-		background-image: url(https://www.elindependiente.com/wp-content/uploads/2018/02/aguacate.jpg);
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center;
-		animation-name: start;
-		animation-duration: 2.7s;
+		flex-direction: column;
+		height: 100vh;
+
 	}
-
-
-	.headTxt{
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
+	
+	.homeTxt{
 		display: flex;
 		align-items: center;
 		margin: auto 0;
@@ -50,11 +40,25 @@ import Footer from "../components/Footer.astro"
 		padding-right: 5%;
 		width: 50%;
 		max-width: 290px;
-		height: 22%;
 	}
 
-	.headTxt span{
+	.homeTxt span{
 		color: #F6F7F6;
+	}
+
+
+	#home-main-content figure{
+		width: 100%;
+		margin: 0;
+		overflow: hidden;
+	}
+
+	#home-main-content figure img{
+		width: 120%;
+		max-width: 1200px;
+		position: relative;
+		top: 70px;
+		right: 10%;
 	}
 
 
@@ -67,10 +71,16 @@ import Footer from "../components/Footer.astro"
 /*laptop up*/
 	@media (min-width: 1024px) and (orientation: landscape) {
 
-		.headTxt{
+		.homeTxt{
 			padding-left: 9%;
 			padding-right: 3%;
 			height: 26%;
+		}
+
+		#home-main-content figure img{
+			top: 35%;
+			right: 0;
+			left: 16%;
 		}
 		
 	}
