@@ -49,9 +49,11 @@ import locationImg from "../../public/location.png"
 			<li>60000</li>
 		</ul>
 	</section>
+	<figure  id="map-fig">
 	<a id="map-a" href="https://www.google.com/maps/place/EMPAQUE+DEL+MONTE+URUAPAN/@19.387084,-102.0344653,17.09z/data=!4m6!3m5!1s0x842de3d485bcf595:0x8763233e0b9f8a00!8m2!3d19.3867025!4d-102.0327894!16s%2Fg%2F11h8d1fm1p">
-		<img id="map" src={locationImg}>
+		<img src={locationImg}>
 	</a>
+	</figure>
 </article>
 
 
@@ -89,10 +91,23 @@ import locationImg from "../../public/location.png"
 		list-style: none;
 	}
 
-	#map{
+	#map-fig{
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		margin: 0;
+	}
+
+	#map-fig a{
+		width: 90%;
+	}
+
+	#map-fig a img{
 		width: 100%;
 		max-width: 600px;
 		max-height: 350px;
+		border-radius: 10px;
+
 	}
 
 	#contact-key{
