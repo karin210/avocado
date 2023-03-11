@@ -1,6 +1,6 @@
 ---
-import blackAvocado from "../../public/avocado-black.png"
-import greenAvocados from "../../public/green_avocados.png"
+import BlackAvocado from "../../public/avocado-black.png"
+import HalfAvocado from "../../public/vecteezy_half-an-avocado-on-a-transparent-background_9337421_820.png"
 ---
 <a name="about us"></a>
 <article id="brandInfo-box">
@@ -12,7 +12,7 @@ import greenAvocados from "../../public/green_avocados.png"
 	<section class="topic description">
 		<h3 class="topic-h description-h">Descripción</h3>
 		<figure id="description-fig" class="topic-fig">
-			<img alt="avocados image" src={greenAvocados} />
+			<img alt="avocados image" src={HalfAvocado} />
 		</figure>
 		<i class="fa-sharp fa-solid fa-eye"></i>
 		<div class="topicInfo-box descriptionInfo-box">
@@ -24,7 +24,7 @@ import greenAvocados from "../../public/green_avocados.png"
 		<i class="fa-sharp fa-solid fa-eye"></i>
 		<h3 id="mission-h" class="topic-h">Misión</h3>
 		<figure id="mission-fig" class="topic-fig">
-			<img alt="black avocado image" src={blackAvocado} />
+			<img alt="black avocado image" src={BlackAvocado} />
 		</figure>
 		<div class="topicInfo-box missionInfo-box">
 			<h3>Misión</h3>
@@ -133,10 +133,10 @@ import greenAvocados from "../../public/green_avocados.png"
 
 	.description{
 		display: grid;
-		grid-template: 1fr 1fr/ 30% 40% 30%;
-		background: linear-gradient(140deg, #f0f0f0 56%, #fcfcfc);
-		width: 100%;
-		height: 22vh;
+    grid-template: 1fr 0.7fr 1.3fr/ 30% 40% 30%;
+    background: linear-gradient(140deg,#f0f0f0 56%,#fcfcfc);
+    width: 100%;
+    height: 22vh;
 	}
 
 	.description i{
@@ -152,14 +152,16 @@ import greenAvocados from "../../public/green_avocados.png"
 	}
 
 	#description-fig{
-		grid-area: 1 / 3 / -1 / -1;
-		height: max-content;
-		margin: 0;
-		overflow: hidden;
+		grid-area: 3 / 1 / -1 / -1;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
 	}
 
 	#description-fig img{
-		width: 134%;
+		height: 220%;
 	}
 
 	.mission, .vision{
