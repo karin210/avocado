@@ -5,23 +5,6 @@ import locationImg from "../../public/location.png"
 <a name="find us"></a>
 <article id="findUs-box">
 	<h2>Contáctanos</h2>
-	<section id="address-box">
-		<ul id="address-key">
-			<li>Col:</li>
-			<li>Calle:</li>
-			<li>Ciudad:</li>
-			<li>C.P.:</li>
-		</ul>
-		<ul id="address-value">
-			<li>Santa Rosa</li>
-			<li>Camino a Santa Rosa NORTE #650</li>
-			<li>Uruapan, Mich</li>
-			<li>60000</li>
-		</ul>
-	</section>
-	<a id="map-a" href="https://www.google.com/maps/place/EMPAQUE+DEL+MONTE+URUAPAN/@19.387084,-102.0344653,17.09z/data=!4m6!3m5!1s0x842de3d485bcf595:0x8763233e0b9f8a00!8m2!3d19.3867025!4d-102.0327894!16s%2Fg%2F11h8d1fm1p">
-		<img id="map" src={locationImg}>
-	</a>
 	<section id="contactData">
 		<ul id="contact-key">
 			<li>
@@ -52,6 +35,23 @@ import locationImg from "../../public/location.png"
 			</li>
 		</ul>
 	</section>
+	<section id="address-box">
+		<ul id="address-key">
+			<li>Col:</li>
+			<li>Calle:</li>
+			<li>Ciudad:</li>
+			<li>C.P.:</li>
+		</ul>
+		<ul id="address-value">
+			<li>Santa Rosa</li>
+			<li>Camino a Santa Rosa NORTE #650</li>
+			<li>Uruapan, Mich</li>
+			<li>60000</li>
+		</ul>
+	</section>
+	<a id="map-a" href="https://www.google.com/maps/place/EMPAQUE+DEL+MONTE+URUAPAN/@19.387084,-102.0344653,17.09z/data=!4m6!3m5!1s0x842de3d485bcf595:0x8763233e0b9f8a00!8m2!3d19.3867025!4d-102.0327894!16s%2Fg%2F11h8d1fm1p">
+		<img id="map" src={locationImg}>
+	</a>
 </article>
 
 
@@ -64,8 +64,8 @@ import locationImg from "../../public/location.png"
 		margin-bottom: 5%;
 	}
 
-	h2{
-		font-size: 1.5rem;
+	#findUs-box h2{
+		font-size: clamp(1rem, 1.1vw, 1.1rem);
 		text-align: center;
 	}
 
@@ -100,7 +100,7 @@ import locationImg from "../../public/location.png"
 	}
 
 	#contact-key li, #contact-value li{
-		font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+		font-size: clamp(1rem, 1.3vw, 1.2rem);
 	}
 	#socialData ul{
 		display: flex;
