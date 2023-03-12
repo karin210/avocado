@@ -95,7 +95,6 @@
 		overflow: hidden;
 		text-align: center;
 		font-size: clamp(1.1rem, 1.5vw, 1.3rem);
-		background-color: #B0F98E;
 		border-radius: 7px;
 		transition: 0.5s;
 	}
@@ -122,26 +121,15 @@
 			height: 89.5vh;
 		}
 
-		
-		.avoQuote{
-		/*	background-color: darkred;
-			width: 150px;
-			height: 75px;
-			border-radius: 5px;
-			position: absolute;
-		    top: 27%;
-		    left: 15%;*/
-    	}
-
     	.avoQuote::before{
     		content: "";
       border-left: 50px solid transparent;
       border-right: 50px solid transparent;
       border-top: 100px solid darkred;
-          position: absolute;
-    top: 11px;
-    left: 49px;
-    z-index: -1;
+      position: absolute;
+	    top: 11px;
+	    left: 49px;
+	    z-index: -1;
     	}
 
 		#avocado-animated img{
@@ -150,18 +138,14 @@
 			animation-duration: 1s;
 		}
 
-		#avocado-animated:hover{
-			filter: brightness(1.07);
-		}
-
 		.avoDataList{
 			width: auto;
 			margin: 0;
 			margin-top: 1700px;
 			animation-name: startProducto;
-		animation-duration: 1s;
-		animation-delay: 0.32s;
-		animation-fill-mode: forwards;
+			animation-duration: 1s;
+			animation-delay: 0.32s;
+			animation-fill-mode: forwards;
 		}
 
 		.avoDataList li{
@@ -187,11 +171,11 @@
 			font-family: 'Comfortaa', sans-serif;
 			background-color: transparent;
 			color: rgba(143, 241, 101, 80%);
-		margin-top: 1700px;
+			margin-top: 1700px;
 			animation-name: startProducto;
-		animation-duration: 1s;
-		animation-delay: 0.64s;
-		animation-fill-mode: forwards;	
+			animation-duration: 1s;
+			animation-delay: 0.64s;
+			animation-fill-mode: forwards;	
 		}
 
 		@keyframes startProducto{
