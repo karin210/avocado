@@ -3,7 +3,7 @@
 	<p class="sizes-p">Selecciona un país para ver sus calibres</p>
 	<section class="countiesContainer">
 		<div class="country">
-			<h1 class="country-h1">USA</h1>
+			<h2 class="country-h2">USA</h2>
 			<table class="usaTb sizesTb">
 				<tr>
 					<th>Calibre</th>
@@ -41,7 +41,7 @@
 			<i class="fa-solid fa-angle-up"></i>
 		</div>
 		<div class="country">
-			<h1 class="country-h1">Japón</h1>
+			<h2 class="country-h2">Japón</h2>
 			<table class="japTb sizesTb">
 				<tr>
 				<th>Calibre</th>
@@ -71,7 +71,7 @@
 			<i class="fa-solid fa-angle-up"></i>
 		</div>
 		<div class="country">
-			<h1 class="country-h1">Canadá</h1>
+			<h2 class="country-h2">Canadá</h2>
 			<table class="canTb sizesTb">
 				<tr>
 					<th>Calibre</th>
@@ -109,7 +109,7 @@
 			<i class="fa-solid fa-angle-up"></i>
 		</div>
 		<div class="country">
-			<h1 class="country-h1">México</h1>
+			<h2 class="country-h2">México</h2>
 			<table class="mexTb sizesTb">
 				<tr>
 					<th>Calibre</th>
@@ -174,7 +174,7 @@
 		transition: 1s;
 	}
 
-	.country-h1{
+	.country-h2{
 		font-size: 1.3rem;
 		text-align: center;
 		margin: 40px 0;
@@ -298,7 +298,7 @@
 </style>
 
 <script type="text/javascript">
-	const countryh1 = document.querySelectorAll(".country-h1");
+	const countryh2 = document.querySelectorAll(".country-h2");
 	const table = document.querySelectorAll(".sizesTb");
 	const country = document.querySelectorAll(".country");
 	const closeTab = document.querySelectorAll(".fa-angle-up")
@@ -310,41 +310,41 @@
 	
 
 	for(i = 0; i < 4; i++){
-		countryh1[i].addEventListener("touchstart", function (e){
+		countryh2[i].addEventListener("touchstart", function (e){
 			// USA sizes
-			if(e.target === countryh1[0] && !usaSizes){
+			if(e.target === countryh2[0] && !usaSizes){
 				country[0].classList.add("showTabUSA");
 				// table[0].classList.add("showSizesTb");
 				usaSizes = !usaSizes;
-			} else if(e.target === countryh1[0] && usaSizes){
+			} else if(e.target === countryh2[0] && usaSizes){
 					country[0].classList.remove("showTabUSA");
 					// table[0].classList.remove("showSizesTb");
 					usaSizes = !usaSizes;
 				}
 
 				// Japan sizes
-			else if(e.target === countryh1[1] && !japSizes){
+			else if(e.target === countryh2[1] && !japSizes){
 				country[1].classList.add("showTabJap");
 				japSizes = !japSizes;
-			} else if(e.target === countryh1[1] && japSizes){
+			} else if(e.target === countryh2[1] && japSizes){
 					country[1].classList.remove("showTabJap");
 					japSizes = !japSizes;
 				}
 
 				// Canada sizes
-			else if(e.target === countryh1[2] && !canSizes){
+			else if(e.target === countryh2[2] && !canSizes){
 				country[2].classList.add("showTabUSA");
 				canSizes = !canSizes;
-			} else if(e.target === countryh1[2] && canSizes){
+			} else if(e.target === countryh2[2] && canSizes){
 					country[2].classList.remove("showTabUSA");
 					canSizes = !canSizes;
 				}
 
 				// Mexico sizes
-			else if(e.target === countryh1[3] && !mexSizes){
+			else if(e.target === countryh2[3] && !mexSizes){
 				country[3].classList.add("showTabJap");
 				mexSizes = !mexSizes;
-			} else if(e.target === countryh1[3] && mexSizes){
+			} else if(e.target === countryh2[3] && mexSizes){
 					country[3].classList.remove("showTabJap");
 					mexSizes = !mexSizes;
 				}
