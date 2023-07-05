@@ -164,16 +164,13 @@ import Logo from "./Logo.astro"
 
 
 	function dropDown() {
-	console.log(menuOpen);
   	menuOpen = !menuOpen;
 		if(menuOpen) {
-			console.log("open!");
 		navBox.classList.add("nav-touch-open");
 		navMenu.style.display = "flex";
 		menuIcon.style.marginLeft = '83%';
 		// menuOpen = !menuOpen;
 		} else {
-				console.log("closed!");
 				navMenu.style.display = "none";
 				navBox.classList.remove("nav-touch-open");
 				menuIcon.style.marginLeft = '0';
