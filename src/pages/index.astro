@@ -36,6 +36,7 @@ import Footer from "../components/Footer.astro"
 		width: 100%;
 		margin-top: 24vh;
 		align-items: center;
+		justify-content: center;
 	}
 
 	.homeTxt span{
@@ -57,12 +58,23 @@ import Footer from "../components/Footer.astro"
 		width: 100%;
 		max-width: 1100px;
 		transform: rotate(330deg);
+		animation-name: start;
+		animation-duration: 1s;
 	}
 
 
 	@keyframes start {
-		from {filter: brightness(0);}
-		to {filter: brightness(0.93);}
+		from {
+			position: relative;
+			top: 30px;
+			filter: opacity(0);
+
+		}
+		to {
+			position: relative;
+			top: 0;
+			filter: opacity(1);
+		}
 	}
 
 
